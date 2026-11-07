@@ -348,7 +348,7 @@ const coaching = {
     <p class="intro">Đồng hành 1:1 dựa trên nền tảng trí tuệ cảm xúc, theo chuẩn năng lực ICF, để cùng anh chị khám phá suy nghĩ, nhìn lại những trăn trở dưới lăng kính của các nguyên lý hiệu quả, từ đó tìm cơ hội xây dựng những thay đổi duy trì được lâu dài trong công việc và cuộc sống.</p>
     <div class="btns"><a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch khai vấn</a></div>
   </div>
-  <img src="assets/img/chan-dung-2.jpg" alt="Nguyễn Minh Thắng" width="500" height="760">
+  <img src="assets/img/coaching-lang-nghe.jpg" alt="Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn" width="900" height="1125">
 </div></section>
 
 <section class="sec"><div class="col stack">
@@ -371,11 +371,16 @@ const coaching = {
 </div></section>
 
 <section class="sec"><div class="col stack">
-  <div class="sec-head rv"><span class="kicker">Cách tôi khai vấn</span><h2>Một không gian an toàn để nói ra điều mình đang trăn trở</h2></div>
-  <div class="prose rv">
+  <div class="split-rev rv">
+  <div class="stack" style="gap:18px">
+  <div class="sec-head"><span class="kicker">Cách tôi khai vấn</span><h2>Một không gian an toàn để nói ra điều mình đang trăn trở</h2></div>
+  <div class="prose">
     <p>Mỗi phiên khai vấn là một không gian an toàn và thoải mái, nơi anh chị có thể nói ra những điều đang trăn trở, lo lắng hay suy nghĩ mà không sợ bị đánh giá.</p>
     <p>Khi được lắng nghe trọn vẹn, những điều rối bời bên trong dần trở nên sáng rõ. Anh chị hiểu hơn về bức tranh hiện tại của mình: cảm xúc, mong muốn và những gì đang thực sự quan trọng.</p>
     <p>Từ đó, anh chị nhận ra những điểm sáng sẵn có trong chính mình: những nguồn lực có thể dựa vào để tháo gỡ lo lắng, phát triển hơn và sống đủ đầy hơn.</p>
+  </div>
+  </div>
+  <img src="assets/img/coaching-trao-doi.jpg" alt="Nguyễn Minh Thắng trao đổi trong một phiên khai vấn" width="900" height="1124" loading="lazy">
   </div>
 </div></section>
 
@@ -418,15 +423,16 @@ const al = {
   desc: 'Action Learning theo phương pháp WIAL: một nhóm cùng giải quyết vấn đề thật, phát triển năng lực lãnh đạo trong lúc làm.',
   active: 'khai-van',
   body: `
-<section class="page-head"><div class="col">
+<section class="page-head noimg"><div class="col">
   <div class="txt">
     <span class="kicker">Khai vấn · Action Learning</span>
     <h1>Giải quyết vấn đề thật, phát triển năng lực cùng lúc</h1>
     <p class="intro">Action Learning giúp một nhóm cùng giải quyết một vấn đề thật đang khó của tổ chức. Trong lúc đó, mỗi người rèn luyện năng lực lãnh đạo, kỹ năng đặt câu hỏi và học hỏi lẫn nhau.</p>
     <div class="btns"><a class="btn btn-o" href="lien-he.html">Liên hệ trao đổi</a></div>
   </div>
-  <img src="assets/img/chan-dung-1.jpg" alt="Nguyễn Minh Thắng" width="600" height="900">
 </div></section>
+
+<div class="col wide-photo"><img src="assets/img/action-learning-1.jpg" alt="Nguyễn Minh Thắng điều phối một nhóm Action Learning" width="1448" height="1086"></div>
 
 <section class="sec"><div class="col stack">
   <div class="sec-head rv"><span class="kicker">Action Learning là gì</span><h2>Sáu thành phần theo phương pháp WIAL</h2></div>
@@ -451,6 +457,7 @@ const al = {
 
 <section class="sec"><div class="col stack">
   <div class="sec-head rv"><span class="kicker">Một buổi Action Learning</span><h2>Diễn ra thế nào</h2></div>
+  <figure class="photo-fig rv"><img src="assets/img/action-learning-2.jpg" alt="Một nhóm Action Learning đang trao đổi quanh bàn tròn" width="1448" height="1086" loading="lazy"></figure>
   <ol class="steps rv" style="--n:5">
     <li><b>1</b><div><strong>Trình bày vấn đề</strong><span>Người có vấn đề chia sẻ ngắn gọn</span></div></li>
     <li><b>2</b><div><strong>Đặt câu hỏi</strong><span>Cả nhóm hỏi để hiểu sâu, chưa vội giải pháp</span></div></li>
@@ -462,9 +469,15 @@ const al = {
 
 <section class="sec"><div class="col stack">
   <div class="sec-head rv"><span class="kicker">Nền tảng</span><h2>Chứng nhận</h2></div>
-  <ul class="certs rv">
-    <li><span class="org">WIAL · 2024</span><div><strong>Certified Action Learning Coach (CALC)</strong><span>World Institute for Action Learning</span></div></li>
-  </ul>
+  <div class="found rv">
+    <div class="stack" style="gap:16px">
+      <ul class="certs">
+        <li><span class="org">WIAL · 2024</span><div><strong>Certified Action Learning Coach (CALC)</strong><span>World Institute for Action Learning</span></div></li>
+      </ul>
+      <p class="note">Tôi được đào tạo và chứng nhận theo phương pháp Action Learning của WIAL (World Institute for Action Learning), tổ chức chứng nhận Action Learning Coach trên toàn cầu.</p>
+    </div>
+    <figure class="photo-fig portrait"><img src="assets/img/wial-viet-nam.jpg" alt="Nguyễn Minh Thắng cùng Trưởng đại diện, Giám đốc WIAL Việt Nam" width="900" height="1200" loading="lazy"><figcaption>Cùng Trưởng đại diện, Giám đốc WIAL Việt Nam, WIAL Master Coach &amp; Mentor</figcaption></figure>
+  </div>
 </div></section>
 
 <section class="sec"><div class="col stack">
