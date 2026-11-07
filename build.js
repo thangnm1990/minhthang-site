@@ -5,6 +5,7 @@ const ROOT = __dirname;
 
 const SITE = 'https://www.minhthangspace.com';
 const C = {
+  wialProfile: 'https://directory.wial.org/vietnam/ph%E1%BB%91-%C4%91%E1%BB%A9c-giang/coaches/nguyen-minh-thang',
   email: 'thangnm.ypt@gmail.com',
   linkedin: 'https://www.linkedin.com/in/thangaiskill',
   linkedinText: 'linkedin.com/in/thangaiskill',
@@ -58,7 +59,7 @@ const PROGRAMS = [
 const NAV = [
   ['ve-toi.html', 'Về tôi', 've-toi', [['ve-toi.html#su-menh', 'Sứ mệnh'], ['ve-toi.html#hanh-trinh', 'Hành trình']]],
   ['chuong-trinh.html', 'Chương trình', 'chuong-trinh'],
-  ['coaching.html', 'Khai vấn', 'khai-van', [['coaching.html', 'Coaching 1:1'], ['action-learning.html', 'Action Learning']]],
+  ['coaching.html', 'Khai vấn', 'khai-van', [['coaching.html', '1-1 Coaching'], ['action-learning.html', 'Team Coaching (Action Learning)']]],
   ['bai-viet.html', 'Bài viết', 'bai-viet'],
   ['lien-he.html', 'Liên hệ', 'lien-he'],
 ];
@@ -87,7 +88,7 @@ function contactBlock() {
   </div>
   <div class="btns"><a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch khai vấn</a><a class="btn btn-l" href="lien-he.html">Liên hệ trao đổi</a></div>
   <div class="foot"><span>Greater Every Day · © 2026 Nguyễn Minh Thắng</span>
-    <nav aria-label="Chân trang"><a href="ve-toi.html">Về tôi</a><a href="chuong-trinh.html">Chương trình</a><a href="coaching.html">Coaching 1:1</a><a href="action-learning.html">Action Learning</a><a href="bai-viet.html">Bài viết</a><a href="${C.hub}" target="_blank" rel="noopener">L&amp;D AI Skill Hub</a></nav>
+    <nav aria-label="Chân trang"><a href="ve-toi.html">Về tôi</a><a href="chuong-trinh.html">Chương trình</a><a href="coaching.html">1-1 Coaching</a><a href="action-learning.html">Team Coaching (Action Learning)</a><a href="bai-viet.html">Bài viết</a><a href="${C.hub}" target="_blank" rel="noopener">L&amp;D AI Skill Hub</a></nav>
   </div>
 </div></footer>`;
 }
@@ -286,7 +287,7 @@ const about = {
   <div class="sec-head rv"><span class="kicker">Học vấn và chứng nhận</span><h2>Nền tảng chuyên môn</h2></div>
   <div class="edu rv"><b>HỌC VẤN</b><span>Kỹ sư Công nghệ thông tin</span>·<span>Thạc sĩ Quản trị Kinh doanh (MBA), Đại học FPT</span></div>
   <ul class="certs rv">
-    <li><span class="org">WIAL · 2024</span><div><strong>Certified Action Learning Coach (CALC)</strong><span>World Institute for Action Learning</span></div></li>
+    <li><span class="org">WIAL · 2024</span><div><strong>Certified Action Learning Coach (CALC)</strong><span>World Institute for Action Learning · <a href="${C.wialProfile}" target="_blank" rel="noopener">Xem hồ sơ trên trang WIAL</a></span></div></li>
     <li><span class="org">LCV</span><div><strong>Leap Coaching Essentials (ICF Level 1)</strong><span>Chương trình đào tạo khai vấn theo chuẩn năng lực ICF</span></div></li>
     <li><span class="org">ANTHROPIC · 2026</span><div><strong>AI Fluency for Educators &amp; Teaching AI Fluency</strong><span>Anthropic Academy</span></div></li>
     <li><span class="org">GOOGLE · 2026</span><div><strong>Generative AI for Educators &amp; Google Certified Educator L1</strong><span>Google for Education</span></div></li>
@@ -475,8 +476,9 @@ const al = {
         <li><span class="org">WIAL · 2024</span><div><strong>Certified Action Learning Coach (CALC)</strong><span>World Institute for Action Learning</span></div></li>
       </ul>
       <p class="note">Tôi được đào tạo và chứng nhận theo phương pháp Action Learning của WIAL (World Institute for Action Learning), tổ chức chứng nhận Action Learning Coach trên toàn cầu.</p>
+      <p><a class="more" href="${C.wialProfile}" target="_blank" rel="noopener">Xem hồ sơ coach của tôi trên trang WIAL →</a></p>
     </div>
-    <figure class="photo-fig portrait"><img src="assets/img/wial-viet-nam.jpg" alt="Nguyễn Minh Thắng cùng Trưởng đại diện, Giám đốc WIAL Việt Nam" width="900" height="1200" loading="lazy"><figcaption>Cùng Trưởng đại diện, Giám đốc WIAL Việt Nam, WIAL Master Coach &amp; Mentor</figcaption></figure>
+    <figure class="photo-fig portrait"><img src="assets/img/wial-viet-nam.jpg" alt="Nguyễn Minh Thắng cùng anh Nguyễn Duy Minh, Giám đốc WIAL Việt Nam" width="900" height="1200" loading="lazy"><figcaption>Cùng anh Nguyễn Duy Minh, Trưởng đại diện, Giám đốc WIAL Việt Nam, WIAL Master Coach &amp; Mentor</figcaption></figure>
   </div>
 </div></section>
 
