@@ -175,6 +175,7 @@ const home = {
     <span class="eyebrow" style="color:var(--orange)">Xin chào, tôi là</span>
     <h1>Nguyễn Minh <span>Thắng</span></h1>
     <div class="roles"><span>Trainer</span><span>Coach</span><span>AI Builder</span></div>
+    <p class="mission-label">Sứ mệnh của tôi là</p>
     <p class="motto">${C.mottoEn}</p>
     <p class="motto-vi">${C.mottoVi}</p>
     <div class="btns"><a class="btn btn-o" href="lien-he.html">Liên hệ trao đổi</a><a class="btn btn-w" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch khai vấn</a></div>
@@ -184,9 +185,9 @@ const home = {
 
 <section class="band band-white" aria-label="Ba vai trò"><div class="col">
   <div class="roles3 rv">
-    <div class="role-card"><h3>Trainer</h3><p>Đào tạo ứng dụng AI cho cá nhân, nhà lãnh đạo, đội ngũ L&amp;D và đào tạo giảng viên (Train the Trainer).</p></div>
-    <div class="role-card"><h3>Coach</h3><p>1-1 Coaching dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF · Team Coaching (Action Learning), Action Learning Coach được WIAL chứng nhận.</p></div>
-    <div class="role-card"><h3>AI Builder</h3><p>Tác giả L&amp;D AI Skill Hub, thư viện ${C.skills} AI skill miễn phí cho người làm L&amp;D · Tác giả phương pháp CAPTURE, giúp biến chuyên môn thành AI skill.</p></div>
+    <div class="role-card"><h3>Trainer</h3><p>Đào tạo các chương trình chuyển hóa và có tác động cao vào thực tiễn về Hiệu quả cá nhân, Lãnh đạo và ứng dụng AI.</p></div>
+    <div class="role-card"><h3>Coach</h3><p>Khai vấn ở nhiều cấp độ, gồm Khai vấn 1-1 theo chuẩn năng lực ICF và Khai vấn nhóm theo phương pháp Action Learning, chuẩn WIAL.</p></div>
+    <div class="role-card"><h3>AI Builder</h3><p>Thiết kế và xây dựng các giải pháp AI cho các bài toán thực tế. Tác giả L&amp;D AI Skill Hub, thư viện AI skill chuyên biệt dành cho người làm L&amp;D. Tác giả framework CAPTURE, giúp biến kỹ năng chuyên môn thành các AI skill dùng được trên mọi công cụ AI tạo sinh.</p></div>
   </div>
 </div></section>
 
