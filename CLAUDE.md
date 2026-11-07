@@ -17,6 +17,6 @@ Website hồ sơ giảng viên của Nguyễn Minh Thắng (Thomas). Repo này t
 ## Kỹ thuật
 - `node build.js` sinh 7 trang vào `dist/` (không framework). Nội dung nằm trong `build.js`; giao diện `assets/style.css`; JS `assets/main.js`.
 - Không viết `<script>` nội tuyến (CSP trong `vercel.json`). Thêm dịch vụ ngoài thì thêm địa chỉ vào CSP.
-- Trắng chủ đạo, chữ navy, điểm nhấn cam, font Be Vietnam Pro.
+- Giao diện (từ 07/11/2026): navy chủ đạo, cam nhấn; tiêu đề chữ hẹp đậm hai màu (Barlow Condensed, dòng dưới màu cam) qua class `big2`/`mid2`; chữ thường Be Vietnam Pro; dải nền xen kẽ `band-navy`/`band-white`/`band-cream`; đầu trang chi tiết dùng hàm `pageHero()`; ảnh chân dung tách nền `assets/img/tach-nen-*.webp` đặt trước vòng tròn cam (`.cut`); nút Đặt lịch khai vấn nổi (`.float`); ký hiệu MT làm logo tạm. Tiêu đề lớn cần line-height ≥ 1.06 để dấu tiếng Việt không chồng dòng.
 - `SITE` trong `build.js` dùng cho canonical, og:url, sitemap. Bản `dist/` dùng đường dẫn gọn (`/ve-toi`); bản `art/` (xem trước dạng artifact) giữ `.html`.
 - Ảnh chia sẻ `assets/img/og-cover.jpg` (1200x630, có tên miền). Đổi tên miền hoặc câu sứ mệnh thì làm lại ảnh.
