@@ -156,7 +156,7 @@ const home = {
 <section class="proof" aria-label="Bằng chứng"><div class="col wide">
   <ul class="roles">
     <li><b>TRAINER</b><span>Đào tạo ứng dụng AI cho cá nhân, nhà lãnh đạo, đội ngũ L&amp;D và đào tạo giảng viên (Train the Trainer)</span></li>
-    <li><b>COACH</b><span>Coaching 1:1 dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF · Action Learning Coach được WIAL chứng nhận</span></li>
+    <li><b>COACH</b><span>1-1 Coaching dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF · Team Coaching (Action Learning), Action Learning Coach được WIAL chứng nhận</span></li>
     <li><b>AI BUILDER</b><span>Tác giả L&amp;D AI Skill Hub, thư viện ${C.skills} AI skill miễn phí cho người làm L&amp;D · Tác giả phương pháp CAPTURE, giúp biến chuyên môn thành AI skill</span></li>
   </ul>
   <div class="nums">
@@ -199,8 +199,8 @@ const home = {
       <div class="btns"><a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch khai vấn</a></div>
     </div>
     <div class="forms">
-      <a href="coaching.html"><small>CHO CÁ NHÂN</small><h3>Coaching 1:1</h3><p>Dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF. Hiệu quả bền vững và thói quen.</p><span class="go">Tìm hiểu thêm →</span></a>
-      <a href="action-learning.html"><small>CHO NHÓM VÀ TỔ CHỨC</small><h3>Action Learning</h3><p>Theo phương pháp WIAL. Giải quyết vấn đề thật, phát triển năng lực cùng lúc.</p><span class="go">Tìm hiểu thêm →</span></a>
+      <a href="coaching.html"><small>CHO CÁ NHÂN</small><h3>1-1 Coaching</h3><p>Dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF. Hiệu quả bền vững và thói quen.</p><span class="go">Tìm hiểu thêm →</span></a>
+      <a href="action-learning.html"><small>CHO NHÓM VÀ TỔ CHỨC</small><h3>Team Coaching (Action Learning)</h3><p>Theo phương pháp WIAL. Giải quyết vấn đề thật, phát triển năng lực cùng lúc.</p><span class="go">Tìm hiểu thêm →</span></a>
     </div>
   </div>
 </div></section>
@@ -340,13 +340,13 @@ const programs = {
 
 /* ============ COACHING 1:1 ============ */
 const coaching = {
-  title: 'Coaching 1:1 · Nguyễn Minh Thắng',
+  title: '1-1 Coaching · Nguyễn Minh Thắng',
   desc: 'Khai vấn 1:1 về hiệu quả bền vững và thói quen, dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF.',
   active: 'khai-van',
   body: `
 <section class="page-head"><div class="col">
   <div class="txt">
-    <span class="kicker">Khai vấn · Coaching 1:1</span>
+    <span class="kicker">Khai vấn · 1-1 Coaching</span>
     <h1>Khai vấn theo trường phái hiệu quả bền vững và thói quen</h1>
     <p class="intro">Đồng hành 1:1 dựa trên nền tảng trí tuệ cảm xúc, theo chuẩn năng lực ICF, để cùng anh chị khám phá suy nghĩ, nhìn lại những trăn trở dưới lăng kính của các nguyên lý hiệu quả, từ đó tìm cơ hội xây dựng những thay đổi duy trì được lâu dài trong công việc và cuộc sống.</p>
     <div class="btns"><a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch khai vấn</a></div>
@@ -422,13 +422,13 @@ const coaching = {
 
 /* ============ ACTION LEARNING ============ */
 const al = {
-  title: 'Action Learning · Nguyễn Minh Thắng',
+  title: 'Team Coaching (Action Learning) · Nguyễn Minh Thắng',
   desc: 'Action Learning theo phương pháp WIAL: một nhóm cùng giải quyết vấn đề thật, phát triển năng lực lãnh đạo trong lúc làm.',
   active: 'khai-van',
   body: `
 <section class="page-head noimg"><div class="col">
   <div class="txt">
-    <span class="kicker">Khai vấn · Action Learning</span>
+    <span class="kicker">Khai vấn · Team Coaching (Action Learning)</span>
     <h1>Giải quyết vấn đề thật, phát triển năng lực cùng lúc</h1>
     <p class="intro">Action Learning giúp một nhóm cùng giải quyết một vấn đề thật đang khó của tổ chức. Trong lúc đó, mỗi người rèn luyện năng lực lãnh đạo, kỹ năng đặt câu hỏi và học hỏi lẫn nhau.</p>
     <div class="btns"><a class="btn btn-o" href="lien-he.html">Liên hệ trao đổi</a></div>
