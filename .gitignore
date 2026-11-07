@@ -1,0 +1,4 @@
+dist/
+art/
+node_modules/
+*.png
