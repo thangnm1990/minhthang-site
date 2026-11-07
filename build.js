@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = __dirname;
 
+const SITE = 'https://www.minhthangspace.com';
 const C = {
   email: 'thangnm.ypt@gmail.com',
   linkedin: 'https://www.linkedin.com/in/thangaiskill',
@@ -93,7 +94,7 @@ function contactBlock() {
 
 const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">';
 
-function pageDoc({ title, desc, active, body }, bodyOnly) {
+function pageDoc({ title, desc, active, body, url = '/' }, bodyOnly) {
   const head = `<title>${title}</title>
 <meta name="description" content="${desc}">
 ${FONTS}
@@ -112,8 +113,17 @@ ${contactBlock()}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 ${head}
+<link rel="canonical" href="${SITE}${url}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Nguyễn Minh Thắng">
+<meta property="og:url" content="${SITE}${url}">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${desc}">
+<meta property="og:image" content="${SITE}/assets/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 ${inner}
@@ -540,10 +550,18 @@ for (const [out, bodyOnlyIndex] of [['dist', false], ['art', true]]) {
   const dir = path.join(ROOT, out);
   fs.rmSync(dir, { recursive: true, force: true });
   fs.mkdirSync(dir, { recursive: true });
-  for (const [file, page] of PAGES) fs.writeFileSync(path.join(dir, file), pageDoc(page, bodyOnlyIndex && file === 'index.html'));
+  for (const [file, page] of PAGES) {
+    const url = file === 'index.html' ? '/' : '/' + file.replace('.html', '');
+    let html = pageDoc({ ...page, url }, bodyOnlyIndex && file === 'index.html');
+    // bản thật dùng đường dẫn gọn (/ve-toi thay vì ve-toi.html)
+    if (out === 'dist') html = html.replace(/href="index\.html"/g, 'href="/"').replace(/href="([a-z-]+)\.html(#[a-z0-9-]+)?"/g, (m, n, h) => `href="/${n}${h || ''}"`);
+    fs.writeFileSync(path.join(dir, file), html);
+  }
   copyDir(path.join(ROOT, 'assets'), path.join(dir, 'assets'));
 }
 // 404 cho bản thật
 fs.writeFileSync(path.join(ROOT, 'dist', '404.html'), pageDoc({ title: 'Không tìm thấy trang · Nguyễn Minh Thắng', desc: 'Không tìm thấy trang.', active: '', body: `<section class="page-head noimg"><div class="col"><div class="txt"><span class="kicker">404</span><h1>Không tìm thấy trang này</h1><p class="intro">Trang anh chị tìm có thể đã đổi địa chỉ.</p><div class="btns"><a class="btn btn-o" href="/">Về trang chủ</a></div></div></div></section>` }));
 { const f=path.join(ROOT,'dist','404.html'); fs.writeFileSync(f, fs.readFileSync(f,'utf8').replace(/(href|src)="(assets\/|[a-z-]+\.html|index\.html)/g,'$1="/$2')); }
+fs.writeFileSync(path.join(ROOT, 'dist', 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${PAGES.map(([f]) => `  <url><loc>${SITE}${f === 'index.html' ? '/' : '/' + f.replace('.html', '')}</loc></url>`).join('\n')}\n</urlset>\n`);
+fs.writeFileSync(path.join(ROOT, 'dist', 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 console.log('Đã dựng', PAGES.length, 'trang vào dist/ và art/');
