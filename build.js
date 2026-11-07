@@ -60,13 +60,15 @@ const NAV = [
   ['ve-toi.html', 'Về tôi', 've-toi', [['ve-toi.html#su-menh', 'Sứ mệnh'], ['ve-toi.html#hanh-trinh', 'Hành trình']]],
   ['chuong-trinh.html', 'Chương trình', 'chuong-trinh'],
   ['coaching.html', 'Khai vấn', 'khai-van', [['coaching.html', '1-1 Coaching'], ['action-learning.html', 'Team Coaching (Action Learning)']]],
+  [C.hub, 'AI cho L&amp;D ↗', 'ai-ld', null, true],
   ['bai-viet.html', 'Bài viết', 'bai-viet'],
   ['lien-he.html', 'Liên hệ', 'lien-he'],
 ];
 
 function header(active) {
-  const items = NAV.map(([href, label, key, sub]) => {
+  const items = NAV.map(([href, label, key, sub, ext]) => {
     const cur = key === active ? ' aria-current="page"' : '';
+    if (ext) return `<li><a href="${href}" target="_blank" rel="noopener" title="Mở L&amp;D AI Skill Hub trong tab mới">${label}</a></li>`;
     if (!sub) return `<li><a href="${href}"${cur}>${label}</a></li>`;
     return `<li class="has-sub"><a href="${href}"${cur}>${label}</a><ul class="sub">${sub.map(([h, l]) => `<li><a href="${h}">${l}</a></li>`).join('')}</ul></li>`;
   }).join('');
