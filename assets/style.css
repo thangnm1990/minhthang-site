@@ -403,3 +403,11 @@ details p{color:var(--body);font-size:16px}
 .social b{font-size:15px;word-break:break-word}
 @media (max-width:900px){.social{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.social{grid-template-columns:1fr}}
+/* Tôi là ai + Tôi có thể giúp ai (trang chủ) */
+.intro{display:grid;grid-template-columns:280px minmax(0,1fr);gap:20px 36px;margin-bottom:56px}
+.intro .big2{font-size:clamp(44px,6vw,72px)}
+.help-head .mid2 span{display:block}
+.intro .tbody{display:flex;flex-direction:column;gap:14px;font-size:17px}
+.help{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.help p{font-size:16px;color:var(--ink);margin-top:6px}
+@media (max-width:760px){.intro{grid-template-columns:1fr;margin-bottom:40px}.help{grid-template-columns:1fr}}

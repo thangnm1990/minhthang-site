@@ -185,7 +185,14 @@ const home = {
   <div class="cut"><img src="assets/img/tach-nen-chap-tay.webp" alt="Chân dung Nguyễn Minh Thắng" width="591" height="1300"></div>
 </div></section>
 
-<section class="band band-white" aria-label="Ba vai trò"><div class="col">
+<section class="band band-white" aria-label="Tôi là ai"><div class="col">
+  <div class="intro rv">
+    <h2 class="big2">Tôi là <span>ai</span></h2>
+    <div class="tbody">
+      <p>Tôi là Nguyễn Minh Thắng, một kỹ sư công nghệ chuyển sang nghề đào tạo và phát triển con người từ năm 2014. Hơn 11 năm qua, tôi đã trải qua nhiều kinh nghiệm về đào tạo, huấn luyện, phát triển và khai vấn tại FPT, MB Group và Techcombank.</p>
+      <p>Hiện nay, tôi làm việc ở ba vai trò. Tôi là giảng viên các chương trình về hiệu quả cá nhân, lãnh đạo và ứng dụng AI. Tôi là coach khai vấn 1-1, được đào tạo theo chuẩn năng lực ICF, và là Action Learning Coach được WIAL chứng nhận. Tôi cũng xây dựng và phát triển các giải pháp AI: tác giả L&amp;D AI Skill Hub, thư viện AI skill miễn phí dành cho người làm L&amp;D, và tác giả framework CAPTURE, giúp biến kinh nghiệm chuyên môn thành các AI skill dùng được trên nhiều nền tảng AI tạo sinh.</p>
+    </div>
+  </div>
   <div class="roles3 rv">
     <div class="role-card"><h3>Trainer</h3><p>Đào tạo các chương trình chuyển hóa và có tác động cao vào thực tiễn về Hiệu quả cá nhân, Lãnh đạo và ứng dụng AI.</p></div>
     <div class="role-card"><h3>Coach</h3><p>Khai vấn ở nhiều cấp độ, gồm Khai vấn 1-1 theo chuẩn năng lực ICF và Khai vấn nhóm theo phương pháp Action Learning, chuẩn WIAL.</p></div>
@@ -202,11 +209,21 @@ const home = {
   </div>
 </div></section>
 
+<section class="band band-cream" aria-label="Tôi có thể giúp ai"><div class="col">
+  <div class="head-row help-head rv"><h2 class="mid2">Tôi có thể giúp ai <span>và giúp được việc gì?</span></h2></div>
+  <div class="forms help rv">
+    <a href="chuong-trinh.html#ld"><small>ĐỘI NGŨ HR VÀ L&amp;D</small><p>Giải phóng thời gian khỏi những việc lặp lại, để dành nhiều thời gian hơn cho con người.</p><span class="go">Tìm hiểu thêm →</span></a>
+    <a href="chuong-trinh.html#ttt"><small>CHUYÊN GIA VÀ GIẢNG VIÊN NỘI BỘ</small><p>Đứng lớp tự tin, truyền cảm hứng và tạo ra tác động thật.</p><span class="go">Tìm hiểu thêm →</span></a>
+    <a href="chuong-trinh.html#lanh-dao"><small>LÃNH ĐẠO VÀ NHÀ QUẢN LÝ</small><p>Dẫn dắt đội ngũ hiệu quả hơn và ứng dụng AI vào việc lãnh đạo đội ngũ.</p><span class="go">Tìm hiểu thêm →</span></a>
+    <a href="coaching.html"><small>CÁ NHÂN</small><p>Hiểu mình hơn và tiến bộ mỗi ngày thông qua khai vấn.</p><span class="go">Tìm hiểu thêm →</span></a>
+  </div>
+</div></section>
+
 <section class="about band-white"><div class="col">
   <div class="ttl"><h2 class="big2">Về <span>tôi</span></h2></div>
   <div class="txt rv">
     <p class="lead">Kỹ sư công nghệ, hơn 11 năm làm nghề phát triển con người.</p>
-    <p>Với tôi, vượt trội không phải là hơn người khác, mà là vượt qua giới hạn của chính mình mỗi ngày, và giúp người bên cạnh nhận ra những khả năng tốt đẹp bên trong họ. Hành trình ấy đi qua bốn chặng:</p>
+    <p>Với tôi, vượt trội không phải là hơn người khác, mà là vượt qua giới hạn của chính mình mỗi ngày, và giúp người bên cạnh nhận ra những khả năng tốt đẹp bên trong họ. Hành trình ấy đi qua bốn bước ngoặt:</p>
     <ol class="chapters">
       <li><b>01</b><a href="ve-toi.html#chuyen-1">Từ kỹ sư công nghệ chuyển thành nhà đào tạo</a></li>
       <li><b>02</b><a href="ve-toi.html#chuyen-2">Trở thành nhà đào tạo, huấn luyện chuyên nghiệp</a></li>
@@ -284,17 +301,17 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
 </div></section>
 
 <section class="band band-white smt" id="hanh-trinh"><div class="col narrow">
-  <div class="head-row rv"><h2 class="big2">Hành <span>trình</span></h2><p>Bốn chặng đường làm nên tôi hôm nay.</p></div>
+  <div class="head-row rv"><h2 class="big2">Hành <span>trình</span></h2><p>Bốn bước ngoặt làm nên tôi ngày hôm nay.</p></div>
   <ol class="map rv">
     <li><span class="dot"></span><b>Kỹ sư CNTT</b></li>
-    <li class="star"><span class="dot">1</span><b>FPT</b><a href="#chuyen-1">Chặng 1</a></li>
-    <li class="star"><span class="dot">2</span><b>MB Group</b><a href="#chuyen-2">Chặng 2</a></li>
-    <li class="star"><span class="dot">3</span><b>Techcombank</b><a href="#chuyen-3">Chặng 3</a></li>
-    <li class="star"><span class="dot">4</span><b>AI</b><a href="#chuyen-4">Chặng 4</a></li>
+    <li class="star"><span class="dot">1</span><b>FPT</b><a href="#chuyen-1">Bước ngoặt 1</a></li>
+    <li class="star"><span class="dot">2</span><b>MB Group</b><a href="#chuyen-2">Bước ngoặt 2</a></li>
+    <li class="star"><span class="dot">3</span><b>Techcombank</b><a href="#chuyen-3">Bước ngoặt 3</a></li>
+    <li class="star"><span class="dot">4</span><b>AI</b><a href="#chuyen-4">Bước ngoặt 4</a></li>
   </ol>
 
   <article class="story" id="chuyen-1">
-    <div class="flag rv"><b>01</b><small>Chặng</small></div>
+    <div class="flag rv"><b>01</b><small>Bước ngoặt</small></div>
     <div class="rv">
       <h3>Từ kỹ sư công nghệ chuyển thành nhà đào tạo</h3>
       <div class="prose">
@@ -309,7 +326,7 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
   </article>
 
   <article class="story" id="chuyen-2">
-    <div class="flag rv"><b>02</b><small>Chặng</small></div>
+    <div class="flag rv"><b>02</b><small>Bước ngoặt</small></div>
     <div class="rv">
       <h3>Trở thành nhà đào tạo, huấn luyện chuyên nghiệp</h3>
       <div class="prose">
@@ -321,7 +338,7 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
   </article>
 
   <article class="story" id="chuyen-3">
-    <div class="flag rv"><b>03</b><small>Chặng</small></div>
+    <div class="flag rv"><b>03</b><small>Bước ngoặt</small></div>
     <div class="rv">
       <h3>Khám phá sứ mệnh bản thân và thực hành thói quen hiệu quả</h3>
       <div class="prose">
@@ -335,7 +352,7 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
   </article>
 
   <article class="story" id="chuyen-4">
-    <div class="flag rv"><b>04</b><small>Chặng</small></div>
+    <div class="flag rv"><b>04</b><small>Bước ngoặt</small></div>
     <div class="rv">
       <h3>Xây dựng giá trị giao thoa giữa AI và con người</h3>
       <div class="prose">
