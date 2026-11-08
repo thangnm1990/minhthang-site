@@ -11,7 +11,7 @@ Website hồ sơ giảng viên của Nguyễn Minh Thắng (Thomas). Repo này t
 - Website xưng "tôi", gọi người đọc là "anh chị". Câu ngắn, không emoji, không bịa số liệu.
 - Phong cách "chuyên gia điềm tĩnh": không tự phong chuyên gia, không bảng giá, không bán hàng.
 - Câu sứ mệnh: "Become greater every day and inspire greatness in others." / "Trở nên vượt trội hơn mỗi ngày và truyền cảm hứng để người khác khám phá sự vượt trội bên trong họ."
-- Không nhắc: 7 Habits/FranklinCovey, giải thưởng nội bộ Techcombank, vai trò AI Builder tại Techcombank, ĐH Ngoại thương. Tổ chức chỉ nhắc FPT, MB Group, Techcombank.
+- Không nhắc: 7 Habits/FranklinCovey, giải thưởng nội bộ Techcombank, vai trò AI Builder tại Techcombank, ĐH Ngoại thương. Tổ chức chỉ nhắc FPT, MB Group, Techcombank (riêng bước ngoặt 2 trong Hành trình có nhắc Phong Vũ, Thomas đồng ý 08/11/2026).
 - Coaching: viết "đào tạo theo chuẩn năng lực ICF" (chưa có chứng chỉ ICF).
 
 ## Kỹ thuật

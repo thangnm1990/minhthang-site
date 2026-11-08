@@ -47,13 +47,13 @@ const PROGRAMS = [
     result: 'Ra về với những use case chạy được trên việc thật của mình.' },
   { id: 'lanh-dao', name: 'Ứng dụng AI nâng cao hiệu quả lãnh đạo', q: 'Muốn sử dụng AI để dẫn dắt đội ngũ nhưng chưa biết bắt đầu từ đâu.', for: 'Dành cho lãnh đạo và quản lý',
     what: 'Xu hướng và tư duy lãnh đạo trong thời AI.',
-    items: ['Ứng dụng AI để tối ưu hóa năng suất cá nhân và phát triển đội ngũ', 'Xây dựng ứng dụng AI để tối ưu hóa năng suất cá nhân', 'Xây dựng ứng dụng AI để quản trị đội ngũ'],
+    items: ['Ứng dụng AI để tối ưu hóa năng suất cá nhân và phát triển đội ngũ', 'Xây dựng ứng dụng AI để quản trị đội ngũ'],
     result: 'Tự thiết lập được quy trình quản trị đội ngũ có AI hỗ trợ.' },
   { id: 'ld', name: 'Ứng dụng AI chuyển đổi L&D', q: 'L&D tốn nhiều thời gian phân tích nhu cầu và thiết kế chương trình, chưa theo kịp nhu cầu học tập thay đổi nhanh và thiếu thời gian hỗ trợ chuyển đổi hành vi, nâng cao hiệu suất.', for: 'Dành cho người làm L&D và giảng viên nội bộ',
     what: 'Xu hướng AI trong đào tạo và phát triển.',
     items: ['Chuyển dịch vai trò của L&D trong kỷ nguyên AI', 'Nhìn lại cách học của L&D', 'Nhìn lại cách giúp người khác học của L&D', 'Các ứng dụng nâng cao năng suất cho L&D'],
     result: 'Đội ngũ L&D rút ngắn thời gian thiết kế và phát triển chương trình.' },
-  { id: 'ttt', name: 'Train the Trainer (TTT)', sub: 'Giảng viên chuyên nghiệp', q: 'Đã giảng dạy nhưng chưa tự tin về kỹ năng thiết kế và dẫn dắt đào tạo để truyền đạt hiệu quả, thu hút học viên và tạo ra thay đổi sau khóa học.', for: 'Dành cho chuyên gia, giảng viên nội bộ và người chuyển sang đào tạo chuyên nghiệp',
+  { id: 'ttt', name: 'Giảng viên chuyên nghiệp', q: 'Đã giảng dạy nhưng chưa tự tin về kỹ năng thiết kế và dẫn dắt đào tạo để truyền đạt hiệu quả, thu hút học viên và tạo ra thay đổi sau khóa học.', for: 'Dành cho chuyên gia, giảng viên nội bộ và người chuyển sang đào tạo chuyên nghiệp',
     what: 'Giúp người giỏi chuyên môn trở thành người dạy giỏi: thiết kế buổi học lấy người học làm trung tâm và dẫn dắt lớp học có tương tác.',
     items: ['Chân dung nhà đào tạo chuyên nghiệp', 'Phương pháp tiếp cận trong đào tạo', 'Kỹ năng thiết kế học tập', 'Kỹ năng giảng dạy và huấn luyện chuyên nghiệp', 'Ứng dụng AI để nâng cao hiệu quả thiết kế và giảng dạy'],
     result: 'Thiết kế và thực hành một buổi dạy hoàn chỉnh của chính mình.' },
@@ -238,9 +238,9 @@ const home = {
 </div></section>
 
 <section class="band band-navy on-navy"><div class="col">
-  <div class="head-row rv"><h2 class="big2">Chương <span>trình</span></h2><p>Các chương trình đào tạo, mỗi chương trình đi từ hiểu đến làm và kết thúc bằng một sản phẩm dùng được ngay trong công việc.</p></div>
+  <div class="head-row rv"><h2 class="big2">Khóa <span>học</span></h2><p>Các chương trình đào tạo, mỗi chương trình đi từ hiểu đến làm và kết thúc bằng một sản phẩm dùng được ngay trong công việc.</p></div>
   <div class="prog-grid rv">
-    ${PROGRAMS.map((p) => `<a class="prog-item" href="chuong-trinh.html#${p.id}"><span class="ico">${ICONS[p.id]}</span><div><h3>${p.sub || p.name}</h3><p class="q">${p.q}</p><p class="for">${p.for}</p></div></a>`).join('\n    ')}
+    ${PROGRAMS.map((p) => `<a class="prog-item" href="chuong-trinh.html#${p.id}"><span class="ico">${ICONS[p.id]}</span><div><h3>${p.name}${p.sub ? `<small>${p.sub}</small>` : ''}</h3><p class="q">${p.q}</p><p class="for">${p.for}</p></div></a>`).join('\n    ')}
   </div>
   <div class="btns rv mt44"><a class="btn btn-o" href="chuong-trinh.html">Xem chi tiết chương trình</a><a class="btn btn-w" href="lien-he.html#ho-so">Nhận thông tin chương trình và hồ sơ năng lực</a></div>
 </div></section>
@@ -388,12 +388,12 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
 
 /* ============ CHƯƠNG TRÌNH ============ */
 const programs = {
-  title: 'Chương trình · Nguyễn Minh Thắng',
-  desc: 'Các chương trình đào tạo: ứng dụng AI cho cá nhân, nhà lãnh đạo, đội ngũ L&D, và Train the Trainer.',
+  title: 'Khóa học · Nguyễn Minh Thắng',
+  desc: 'Các chương trình đào tạo: ứng dụng AI cho cá nhân, nhà lãnh đạo, đội ngũ L&D, và giảng viên chuyên nghiệp.',
   active: 'chuong-trinh',
   body: `
-${pageHero({ eyebrow: 'Các chương trình đào tạo', l1: 'Chương', l2: 'trình',
-  intro: 'Các chương trình lấy nền tảng là các nguyên lý của con người và được tăng tốc bởi AI.',
+${pageHero({ eyebrow: 'Các chương trình đào tạo', l1: 'Khóa', l2: 'học',
+  intro: 'Các chương trình lấy nền tảng là những nguyên lý phát triển con người, và được tăng tốc bởi AI.',
   buttons: BTN_CONTACT + BTN_PROFILE, img: 'tach-nen-chinh-tay-ao.webp', alt: 'Nguyễn Minh Thắng', w: 570, h: 1300 })}
 
 <section class="band band-cream"><div class="col stack g28">
@@ -407,7 +407,7 @@ ${pageHero({ eyebrow: 'Các chương trình đào tạo', l1: 'Chương', l2: 't
 
 <section class="band band-navy on-navy"><div class="col">
   <div class="head-row rv"><h2 class="big2">Nhịp <span>học</span></h2><p>Mỗi nội dung trong chương trình đi qua năm bước, và kết thúc bằng kế hoạch thực hành 21–30 ngày sau lớp học.</p></div>
-  ${stepsHtml([['Hiểu', 'Nắm nguyên lý và khung phương pháp'], ['Quan sát', 'Quan sát cách làm chuẩn'], ['Làm theo', 'Thực hành có hướng dẫn'], ['Tự làm', 'Áp dụng vào việc của mình'], ['Làm cùng nhóm', 'Chia sẻ, phản hồi, nhân rộng']], 5)}
+  ${stepsHtml([['Hiểu', 'Nắm nguyên lý và khung phương pháp'], ['Quan sát', 'Xem cách làm chuẩn qua ví dụ mẫu'], ['Làm theo', 'Thực hành có hướng dẫn'], ['Tự làm', 'Áp dụng vào việc của mình'], ['Làm cùng nhóm', 'Chia sẻ, phản hồi, nhân rộng']], 5)}
 </div></section>
 `,
 };
@@ -418,7 +418,7 @@ const coaching = {
   desc: 'Khai vấn 1-1 theo trường phái hiệu quả bền vững và thói quen, dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF.',
   active: 'khai-van',
   body: `
-${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', sub: 'Khai vấn dựa trên trí tuệ cảm xúc và theo chuẩn năng lực ICF. Chủ đề thế mạnh: trì hoãn, thói quen, phát triển bản thân và lãnh đạo.',
+${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', sub: 'Chủ đề thế mạnh: trì hoãn, thói quen, phát triển bản thân và lãnh đạo.',
   intro: 'Đồng hành 1:1 dựa trên nền tảng trí tuệ cảm xúc, theo chuẩn năng lực ICF, để cùng anh chị khám phá suy nghĩ, nhìn lại những trăn trở dưới lăng kính của các nguyên lý hiệu quả, từ đó tìm cơ hội xây dựng những thay đổi duy trì được lâu dài trong công việc và cuộc sống.',
   buttons: BTN_CAL + btnPeer('btn-w'), img: 'coaching-lang-nghe.jpg', alt: 'Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn', kind: 'framed', w: 900, h: 1125 })}
 
@@ -554,11 +554,11 @@ ${pageHero({ eyebrow: 'Khai vấn · Team Coaching', l1: 'Team', l2: 'Coaching',
 /* ============ BÀI VIẾT ============ */
 const seriesOrder = [...new Set(ARTICLES.map((a) => a.s))];
 const posts = {
-  title: 'Bài viết · Nguyễn Minh Thắng',
+  title: 'Tài nguyên · Nguyễn Minh Thắng',
   desc: 'Các bài viết của Nguyễn Minh Thắng về AI cho người làm L&D và Train the Trainer, đăng trên L&D AI Skill Hub.',
   active: 'bai-viet',
   body: `
-${pageHero({ eyebrow: 'Chia sẻ về AI và nghề đào tạo', l1: 'Bài', l2: 'viết',
+${pageHero({ eyebrow: 'Chia sẻ về AI và nghề đào tạo', l1: 'Tài', l2: 'nguyên',
   intro: 'Tôi viết về cách người làm L&amp;D dùng AI vào công việc thật, và những nền tảng của nghề giảng dạy. Các bài được đăng trên L&amp;D AI Skill Hub.',
   buttons: `<a class="btn btn-o" href="${C.hub}/hoc/" target="_blank" rel="noopener">Đọc trên L&amp;D AI Skill Hub ↗</a>` })}
 
