@@ -11,6 +11,8 @@ const C = {
   linkedinText: 'linkedin.com/in/thangaiskill',
   calendly: 'https://calendly.com/thangnm-ypt/peer-coaching-40min',
   hub: 'https://ldskillhub.com',
+  fanpage: 'https://www.facebook.com/profile.php?id=100066461480224',
+  zalo: 'https://zalo.me/g/0j7jkkc2txkw2nokfqhf',
   skills: 75,
   mottoEn: 'Become <em>greater</em> every day and inspire greatness in others.',
   mottoVi: 'Trở nên vượt trội hơn mỗi ngày và truyền cảm hứng để người khác khám phá sự vượt trội bên trong họ.',
@@ -88,19 +90,19 @@ function header(active) {
 }
 
 function contactBlock() {
-  return `<footer class="contact on-navy" id="lien-he-cuoi"><div class="col">
-  <h2 class="big2">Cùng <span>trao đổi</span></h2>
-  <p class="sub">Anh chị muốn trao đổi về một chương trình cho đội ngũ, một buổi chia sẻ, hay một phiên khai vấn, cứ nhắn cho tôi.</p>
-  <div class="cgrid">
-    <div><small>Email</small><b>${C.email}</b></div>
-    <div><small>LinkedIn</small><b><a href="${C.linkedin}" target="_blank" rel="noopener">${C.linkedinText}</a></b></div>
+  return `<footer class="contact on-navy" id="ket-noi"><div class="col">
+  <h2 class="big2">Kết nối <span>với tôi</span></h2>
+  <p class="sub">Anh chị muốn trao đổi về một chương trình cho đội ngũ, một buổi chia sẻ, hay đơn giản là kết nối và học hỏi cùng nhau, cứ nhắn cho tôi.</p>
+  <div class="social">
+    <a href="mailto:${C.email}"><small>Email</small><b>${C.email}</b></a>
+    <a href="${C.linkedin}" target="_blank" rel="noopener"><small>LinkedIn</small><b>${C.linkedinText}</b></a>
+    <a href="${C.fanpage}" target="_blank" rel="noopener"><small>Fanpage Facebook</small><b>Theo dõi trên Facebook ↗</b></a>
+    <a href="${C.zalo}" target="_blank" rel="noopener"><small>Nhóm cộng đồng Zalo</small><b>Tham gia nhóm Zalo ↗</b></a>
   </div>
-  <div class="btns"><a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch khai vấn</a><a class="btn btn-w" href="lien-he.html">Liên hệ trao đổi</a></div>
   <div class="foot"><span>Greater Every Day · © 2026 Nguyễn Minh Thắng</span>
-    <nav aria-label="Chân trang"><a href="ve-toi.html">Về tôi</a><a href="chuong-trinh.html">Chương trình</a><a href="coaching.html">1-1 Coaching</a><a href="action-learning.html">Team Coaching (Action Learning)</a><a href="bai-viet.html">Bài viết</a><a href="${C.hub}" target="_blank" rel="noopener">L&amp;D AI Skill Hub</a></nav>
+    <nav aria-label="Chân trang"><a href="ve-toi.html">Về tôi</a><a href="chuong-trinh.html">Chương trình</a><a href="coaching.html">1-1 Coaching</a><a href="action-learning.html">Team Coaching (Action Learning)</a><a href="bai-viet.html">Bài viết</a><a href="lien-he.html">Liên hệ</a></nav>
   </div>
-</div></footer>
-<a class="float" href="${C.calendly}" target="_blank" rel="noopener" aria-label="Đặt lịch khai vấn">${CAL}<span>Đặt lịch khai vấn</span></a>`;
+</div></footer>`;
 }
 
 const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet">';
@@ -162,7 +164,7 @@ function pageHero({ eyebrow, l1, l2, sub, intro, buttons = '', img, alt, kind = 
 const BTN_CAL = `<a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch khai vấn</a>`;
 const BTN_CONTACT = `<a class="btn btn-o" href="lien-he.html">Liên hệ trao đổi</a>`;
 const BTN_PROFILE = `<a class="btn btn-w" href="lien-he.html#ho-so">Nhận hồ sơ năng lực</a>`;
-const stepsHtml = (arr, n) => `<ol class="steps rv" style="--n:${n}">${arr.map(([t, d], i) => `<li style="--i:${i + 1}"><b>${i + 1}</b><div><strong>${t}</strong><span>${d}</span></div></li>`).join('')}</ol>`;
+const stepsHtml = (arr, n) => `<ol class="steps rv n${n}">${arr.map(([t, d], i) => `<li><b>${i + 1}</b><div><strong>${t}</strong><span>${d}</span></div></li>`).join('')}</ol>`;
 
 /* ============ TRANG CHỦ ============ */
 const home = {
@@ -172,13 +174,13 @@ const home = {
   body: `
 <section class="hero"><div class="col">
   <div class="hero-text">
-    <span class="eyebrow" style="color:var(--orange)">Xin chào, tôi là</span>
+    <span class="eyebrow tor">Xin chào, tôi là</span>
     <h1>Nguyễn Minh <span>Thắng</span></h1>
     <div class="roles"><span>Trainer</span><span>Coach</span><span>AI Builder</span></div>
     <p class="mission-label">Sứ mệnh của tôi là</p>
     <p class="motto">${C.mottoEn}</p>
     <p class="motto-vi">${C.mottoVi}</p>
-    <div class="btns"><a class="btn btn-o" href="lien-he.html">Liên hệ trao đổi</a><a class="btn btn-w" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch khai vấn</a></div>
+    <div class="btns"><a class="btn btn-o" href="lien-he.html">Liên hệ trao đổi</a><a class="btn btn-w" href="chuong-trinh.html">Xem chương trình</a></div>
   </div>
   <div class="cut"><img src="assets/img/tach-nen-chap-tay.webp" alt="Chân dung Nguyễn Minh Thắng" width="591" height="1300"></div>
 </div></section>
@@ -191,7 +193,7 @@ const home = {
   </div>
 </div></section>
 
-<section class="band band-navy on-navy" style="padding-block:48px" aria-label="Số liệu"><div class="col">
+<section class="band band-navy on-navy band-tight" aria-label="Số liệu"><div class="col">
   <div class="nums">
     <div><b>11<i>+</i></b><span>năm Đào tạo và Phát triển con người</span></div>
     <div><b>3</b><span>năm nghiên cứu, phát triển ứng dụng và giảng dạy về AI</span></div>
@@ -204,12 +206,13 @@ const home = {
   <div class="ttl"><h2 class="big2">Về <span>tôi</span></h2></div>
   <div class="txt rv">
     <p class="lead">Kỹ sư công nghệ, hơn 11 năm làm nghề phát triển con người.</p>
-    <p>Với tôi, vượt trội không phải là hơn người khác, mà là vượt qua giới hạn của chính mình mỗi ngày, và giúp người bên cạnh nhận ra những khả năng tốt đẹp bên trong họ. Hành trình ấy đi qua ba chặng:</p>
-    <ul class="chapters">
-      <li><small>Chặng 1 · FPT</small><a href="ve-toi.html#chuyen-1">Bắt đầu hành trình đào tạo</a></li>
-      <li><small>Chặng 2 · Techcombank</small><a href="ve-toi.html#chuyen-2">Tìm ra câu tôi muốn sống theo</a></li>
-      <li><small>Chặng 3 · AI</small><a href="ve-toi.html#chuyen-3">AI trả lại thời gian cho con người</a></li>
-    </ul>
+    <p>Với tôi, vượt trội không phải là hơn người khác, mà là vượt qua giới hạn của chính mình mỗi ngày, và giúp người bên cạnh nhận ra những khả năng tốt đẹp bên trong họ. Hành trình ấy đi qua bốn chặng:</p>
+    <ol class="chapters">
+      <li><b>01</b><a href="ve-toi.html#chuyen-1">Từ kỹ sư công nghệ chuyển thành nhà đào tạo</a></li>
+      <li><b>02</b><a href="ve-toi.html#chuyen-2">Trở thành nhà đào tạo, huấn luyện chuyên nghiệp</a></li>
+      <li><b>03</b><a href="ve-toi.html#chuyen-3">Khám phá sứ mệnh bản thân và thực hành thói quen hiệu quả</a></li>
+      <li><b>04</b><a href="ve-toi.html#chuyen-4">Xây dựng giá trị giao thoa giữa AI và con người</a></li>
+    </ol>
     <a class="more" href="ve-toi.html">Đọc hành trình của tôi →</a>
   </div>
   <div class="photo"><img src="assets/img/tach-nen-khoanh-tay.webp" alt="Nguyễn Minh Thắng" width="552" height="1300" loading="lazy"></div>
@@ -220,23 +223,27 @@ const home = {
   <div class="prog-grid rv">
     ${PROGRAMS.map((p) => `<a class="prog-item" href="chuong-trinh.html#${p.id}"><span class="ico">${ICONS[p.id]}</span><div><h3>${p.name}${p.sub ? `<small>${p.sub}</small>` : ''}</h3><p class="q">${p.q}</p><p class="for">${p.for}</p></div></a>`).join('\n    ')}
   </div>
-  <div class="btns rv" style="margin-top:44px"><a class="btn btn-o" href="chuong-trinh.html">Xem chi tiết chương trình</a><a class="btn btn-w" href="lien-he.html#ho-so">Nhận hồ sơ năng lực</a></div>
+  <div class="btns rv mt44"><a class="btn btn-o" href="chuong-trinh.html">Xem chi tiết chương trình</a><a class="btn btn-w" href="lien-he.html#ho-so">Nhận hồ sơ năng lực</a></div>
 </div></section>
 
-<section class="split2 band-cream">
-  <div class="pic" style="background-image:url(assets/img/action-learning-1.jpg)" role="img" aria-label="Nguyễn Minh Thắng điều phối một nhóm Action Learning"></div>
-  <div class="txt rv">
-    <h2 class="big2">Khai <span>vấn</span></h2>
-    <p style="color:var(--body)">Tôi khai vấn theo hướng hiệu quả bền vững và thói quen. Mục tiêu không phải là đưa ra lời khuyên, mà là giúp anh chị tự nhìn rõ điều mình muốn và biến nó thành hành động duy trì được.</p>
-    <div class="forms">
-      <a href="coaching.html"><small>CHO CÁ NHÂN</small><h3>1-1 Coaching</h3><p>Dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF. Hiệu quả bền vững và thói quen.</p><span class="go">Tìm hiểu thêm →</span></a>
-      <a href="action-learning.html"><small>CHO NHÓM VÀ TỔ CHỨC</small><h3>Team Coaching (Action Learning)</h3><p>Theo phương pháp WIAL. Giải quyết vấn đề thật, phát triển năng lực cùng lúc.</p><span class="go">Tìm hiểu thêm →</span></a>
+<section class="band band-cream"><div class="col">
+  <div class="coach-home">
+    <div class="collage rv">
+      <img class="c1" src="assets/img/coaching-trao-doi.jpg" alt="Nguyễn Minh Thắng trong một phiên khai vấn 1-1" width="900" height="1124" loading="lazy">
+      <img class="c2" src="assets/img/action-learning-1.jpg" alt="Nguyễn Minh Thắng điều phối một nhóm Action Learning" width="1448" height="1086" loading="lazy">
     </div>
-    <div class="btns">${BTN_CAL}</div>
+    <div class="txt rv">
+      <h2 class="big2">Khai <span>vấn</span></h2>
+      <p class="tbody">Tôi khai vấn theo hướng hiệu quả bền vững và thói quen. Mục tiêu không phải là đưa ra lời khuyên, mà là giúp anh chị tự nhìn rõ điều mình muốn và biến nó thành hành động duy trì được.</p>
+      <div class="forms">
+        <a href="coaching.html"><small>CHO CÁ NHÂN</small><h3>1-1 Coaching</h3><p>Dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF. Hiệu quả bền vững và thói quen.</p><span class="go">Tìm hiểu thêm →</span></a>
+        <a href="action-learning.html"><small>CHO NHÓM VÀ TỔ CHỨC</small><h3>Team Coaching (Action Learning)</h3><p>Theo phương pháp WIAL. Giải quyết vấn đề thật, phát triển năng lực cùng lúc.</p><span class="go">Tìm hiểu thêm →</span></a>
+      </div>
+    </div>
   </div>
-</section>
+</div></section>
 
-<section class="quote" style="background-image:linear-gradient(rgba(10,22,52,.86),rgba(10,22,52,.86)),url(assets/img/coaching-trao-doi.jpg)"><div class="col">
+<section class="quote quote-bg"><div class="col">
   <p class="rv">Biết điều đúng không đồng nghĩa <em>sống được</em> điều đúng.</p>
   <small>Nguyễn Minh Thắng · Greater Every Day</small>
 </div></section>
@@ -248,7 +255,7 @@ const home = {
     <h2 class="big2 rv">Bài <span>viết</span></h2>
     <div class="rv">
       <ul class="articles">${ARTICLES.filter((a) => a.top).sort((a, b) => a.top - b.top).map(artLink).join('')}</ul>
-      <p style="margin-top:20px"><a class="more" href="bai-viet.html">Xem tất cả bài viết →</a></p>
+      <p class="mt20"><a class="more" href="bai-viet.html">Xem tất cả bài viết →</a></p>
     </div>
   </div>
 </div></section>
@@ -266,30 +273,30 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
   buttons: `<a class="btn btn-o" href="#hanh-trinh">Đọc hành trình</a><a class="btn btn-w" href="lien-he.html">Liên hệ trao đổi</a>`,
   img: 'tach-nen-khoanh-tay.webp', alt: 'Nguyễn Minh Thắng', w: 552, h: 1300 })}
 
-<section class="band band-cream" id="su-menh" style="scroll-margin-top:70px"><div class="col stack">
+<section class="band band-cream smt" id="su-menh"><div class="col stack">
   <span class="eyebrow rv">Sứ mệnh</span>
   <p class="mission-big rv">${C.mottoEn}</p>
   <p class="mission-vi rv">${C.mottoVi}</p>
-  <div class="halves rv" style="margin-top:16px">
+  <div class="halves rv mt16">
     <div><small>NỬA ĐẦU · VIỆC CỦA TÔI</small><h3>Trở nên vượt trội hơn mỗi ngày</h3><p>Tôi chọn chữ "greater" thay vì "better". Vượt trội không phải là hơn người khác, mà là vượt qua những giới hạn hiện tại của chính mình. Và "mỗi ngày" không có nghĩa ngày nào cũng phải có thành tựu lớn. Đôi khi, đó chỉ là duy trì một việc nhỏ mà mình biết là quan trọng.</p></div>
     <div><small>NỬA SAU · LÝ DO TÔI LÀM NGHỀ</small><h3>Truyền cảm hứng cho người khác</h3><p>Tôi tin mỗi người đều có những khả năng tốt đẹp chưa được khám phá hoặc chưa có điều kiện phát huy. Mỗi lần đào tạo, khai vấn hay đồng hành cùng ai đó, tôi mong góp một phần để họ nhận ra khả năng ấy và tiến thêm một bước.</p></div>
   </div>
 </div></section>
 
-<section class="band band-white" id="hanh-trinh" style="scroll-margin-top:70px"><div class="col narrow">
-  <div class="head-row rv"><h2 class="big2">Hành <span>trình</span></h2><p>Ba câu chuyện làm nên tôi hôm nay.</p></div>
+<section class="band band-white smt" id="hanh-trinh"><div class="col narrow">
+  <div class="head-row rv"><h2 class="big2">Hành <span>trình</span></h2><p>Bốn chặng đường làm nên tôi hôm nay.</p></div>
   <ol class="map rv">
     <li><span class="dot"></span><b>Kỹ sư CNTT</b></li>
-    <li class="star"><span class="dot">★</span><b>FPT</b><a href="#chuyen-1">Câu chuyện 1</a></li>
-    <li><span class="dot"></span><b>MB Group</b></li>
-    <li class="star"><span class="dot">★</span><b>Techcombank</b><a href="#chuyen-2">Câu chuyện 2</a></li>
-    <li class="star"><span class="dot">★</span><b>AI</b><a href="#chuyen-3">Câu chuyện 3</a></li>
+    <li class="star"><span class="dot">1</span><b>FPT</b><a href="#chuyen-1">Chặng 1</a></li>
+    <li class="star"><span class="dot">2</span><b>MB Group</b><a href="#chuyen-2">Chặng 2</a></li>
+    <li class="star"><span class="dot">3</span><b>Techcombank</b><a href="#chuyen-3">Chặng 3</a></li>
+    <li class="star"><span class="dot">4</span><b>AI</b><a href="#chuyen-4">Chặng 4</a></li>
   </ol>
 
   <article class="story" id="chuyen-1">
-    <div class="flag rv"><b>01</b><small>Chặng · FPT</small></div>
+    <div class="flag rv"><b>01</b><small>Chặng</small></div>
     <div class="rv">
-      <h3>Bắt đầu hành trình đào tạo</h3>
+      <h3>Từ kỹ sư công nghệ chuyển thành nhà đào tạo</h3>
       <div class="prose">
         <p>Năm 2014, tôi là một kỹ thuật viên công nghệ thông tin. Công việc hằng ngày là máy móc và phần mềm: sự cố nào cũng có nguyên nhân, có cách sửa, và máy không cần được thuyết phục.</p>
         <p>Rồi tôi xin thử sức ở vị trí giảng viên. Đó là một thử thách ba tháng: ai đáp ứng đủ yêu cầu sẽ ở lại làm giảng viên chính thức, ai chưa đủ sẽ quay về vị trí cũ.</p>
@@ -302,9 +309,21 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
   </article>
 
   <article class="story" id="chuyen-2">
-    <div class="flag rv"><b>02</b><small>Chặng · Techcombank</small></div>
+    <div class="flag rv"><b>02</b><small>Chặng</small></div>
     <div class="rv">
-      <h3>Tìm ra câu tôi muốn sống theo</h3>
+      <h3>Trở thành nhà đào tạo, huấn luyện chuyên nghiệp</h3>
+      <div class="prose">
+        <p>Sau khi được giữ lại, tôi biết mình mới chỉ đi những bước đầu tiên. Những năm tiếp theo, ở vai trò quản lý đào tạo rồi giảng viên nội bộ tại MB Group, tôi tập trung học hỏi và củng cố các kỹ năng để trở thành một nhà đào tạo, huấn luyện chuyên nghiệp.</p>
+        <p>Tôi đặt cho mình hai mục tiêu cho mỗi lớp học. Thứ nhất, lớp học phải có năng lượng và cảm hứng, để người học muốn tham gia chứ không chỉ ngồi nghe. Thứ hai, quan trọng hơn, người học phải áp dụng được vào công việc và tạo ra kết quả thực tế.</p>
+      </div>
+      <p class="lesson">Một lớp học không kết thúc khi hết giờ. Nó chỉ thật sự hoàn thành khi người học mang được điều đã học vào công việc.</p>
+    </div>
+  </article>
+
+  <article class="story" id="chuyen-3">
+    <div class="flag rv"><b>03</b><small>Chặng</small></div>
+    <div class="rv">
+      <h3>Khám phá sứ mệnh bản thân và thực hành thói quen hiệu quả</h3>
       <div class="prose">
         <p>Khoảng bốn năm trước, tôi dành thời gian suy ngẫm nghiêm túc về sứ mệnh của bản thân. Tôi thử hình dung một thời điểm rất xa, khi mình đã già và có cơ hội nhìn lại toàn bộ cuộc đời đã đi qua. Khi ấy, điều gì sẽ khiến tôi thấy cuộc đời này có ý nghĩa? Tôi đã trở thành người như thế nào, đã tạo ra giá trị gì?</p>
         <p>Phiên bản đầu tiên của bản tuyên ngôn sứ mệnh không phải một câu ngắn gọn. Nó dài gần hai trang giấy: những khát khao, những thế mạnh và cả điểm yếu tôi nhận ra ở mình, những điều khiến tôi hạnh phúc khi làm, những giá trị tôi sẵn lòng cho đi.</p>
@@ -315,10 +334,10 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
     </div>
   </article>
 
-  <article class="story" id="chuyen-3">
-    <div class="flag rv"><b>03</b><small>Chặng · AI</small></div>
+  <article class="story" id="chuyen-4">
+    <div class="flag rv"><b>04</b><small>Chặng</small></div>
     <div class="rv">
-      <h3>AI trả lại thời gian cho con người</h3>
+      <h3>Xây dựng giá trị giao thoa giữa AI và con người</h3>
       <div class="prose">
         <p>Hơn 11 năm làm nghề, tôi đã nhiều lần thấy đồng nghiệp cặm cụi hàng giờ nghiên cứu tài liệu, soạn giáo án, chuẩn bị lớp. Nhiều giờ trong số đó bị tiêu vào những việc lặp đi lặp lại, thay vì phần quan trọng nhất của nghề: ở bên con người, lắng nghe, kèm cặp, giúp một ai đó tiến bộ.</p>
         <p>AI có thể gánh bớt phần việc đó. Nhưng khi bắt đầu đóng gói chính công việc của mình thành AI skill, tôi nhận ra điều khó nhất không phải công nghệ, mà là diễn đạt rõ cách mình làm việc: bắt đầu từ đâu, dựa vào gì để quyết định, thế nào là đủ tốt.</p>
@@ -357,9 +376,9 @@ ${pageHero({ eyebrow: 'Bốn chương trình đào tạo', l1: 'Chương', l2: '
   intro: 'Biết thêm một phương pháp chưa chắc tạo ra thay đổi. Vì vậy mỗi chương trình đều đi từ hiểu đến làm, thực hành trên bài toán thật của người học, và kết thúc bằng một sản phẩm dùng được ngay trong công việc.',
   buttons: BTN_CONTACT + BTN_PROFILE, img: 'tach-nen-chinh-tay-ao.webp', alt: 'Nguyễn Minh Thắng', w: 570, h: 1300 })}
 
-<section class="band band-cream"><div class="col stack" style="gap:28px">
+<section class="band band-cream"><div class="col stack g28">
   ${PROGRAMS.map((p, i) => `<article class="prog-card rv" id="${p.id}">
-    <div class="side"><span class="ico">${ICONS[p.id]}</span><small>CHƯƠNG TRÌNH 0${i + 1}</small><h3>${p.name}</h3>${p.sub ? `<p><strong style="color:#fff">${p.sub}</strong></p>` : ''}<p class="q">${p.q}</p><p>${p.for}</p></div>
+    <div class="side"><span class="ico">${ICONS[p.id]}</span><small>CHƯƠNG TRÌNH 0${i + 1}</small><h3>${p.name}</h3>${p.sub ? `<p><strong class="w">${p.sub}</strong></p>` : ''}<p class="q">${p.q}</p><p>${p.for}</p></div>
     <div class="body"><p class="what">${p.what}</p>
       <ul class="dash">${p.items.map((x) => `<li>${x}</li>`).join('')}</ul>
       <p class="result"><small>KẾT QUẢ CHO NGƯỜI HỌC</small>${p.result}</p></div>
@@ -384,7 +403,7 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
   buttons: BTN_CAL, img: 'coaching-lang-nghe.jpg', alt: 'Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn', kind: 'framed', w: 900, h: 1125 })}
 
 <section class="band band-white"><div class="col narrow stack">
-  <div class="head-row rv" style="margin-bottom:10px"><h2 class="mid2">Khai vấn <span>là gì</span></h2></div>
+  <div class="head-row rv mb6"><h2 class="mid2">Khai vấn <span>là gì</span></h2></div>
   <blockquote class="icf rv">
     <p>"Khai vấn là sự đồng hành cùng khách hàng trong một tiến trình khơi gợi tư duy và sáng tạo, truyền cảm hứng để họ phát huy tối đa tiềm năng cá nhân và nghề nghiệp."</p>
     <footer>ICF, Liên đoàn Khai vấn Quốc tế (International Coaching Federation)</footer>
@@ -404,7 +423,7 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
 
 <section class="band band-navy on-navy"><div class="col">
   <div class="media2">
-    <div class="rv stack" style="gap:18px">
+    <div class="rv stack g18">
       <span class="eyebrow">Cách tôi khai vấn</span>
       <h2 class="mid2">Một không gian an toàn <span>để nói ra điều mình đang trăn trở</span></h2>
       <div class="prose">
@@ -420,7 +439,7 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
 <section class="band band-white"><div class="col">
   <div class="head-row rv"><h2 class="mid2">Một phiên <span>diễn ra thế nào</span></h2><p>40 phút qua Zoom. Tôi đang tích lũy giờ thực hành khai vấn, nên các phiên hiện tại miễn phí.</p></div>
   ${stepsHtml([['Chọn chủ đề', 'Anh chị mang đến một điều đang trăn trở'], ['Làm rõ điều muốn', 'Thành công trông như thế nào với anh chị'], ['Nhìn lại và mở lựa chọn', 'Hiện trạng, điều cản trở, các hướng đi'], ['Chốt một bước', 'Một hành động nhỏ làm được ngay']], 4)}
-  <p class="callout rv" style="margin-top:28px"><b>Khai vấn không phải là trị liệu.</b> Khai vấn không thay thế trị liệu tâm lý hay tư vấn y tế. Nếu nhận thấy anh chị cần một sự hỗ trợ chuyên sâu hơn, tôi sẽ nói rõ và gợi ý anh chị tìm đến chuyên gia phù hợp.</p>
+  <p class="callout rv mt28"><b>Khai vấn không phải là trị liệu.</b> Khai vấn không thay thế trị liệu tâm lý hay tư vấn y tế. Nếu nhận thấy anh chị cần một sự hỗ trợ chuyên sâu hơn, tôi sẽ nói rõ và gợi ý anh chị tìm đến chuyên gia phù hợp.</p>
 </div></section>
 
 <section class="band band-cream"><div class="col">
@@ -433,7 +452,7 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
 </div></section>
 
 <section class="band band-white"><div class="col narrow stack">
-  <div class="head-row rv" style="margin-bottom:6px"><h2 class="mid2">Hỏi <span>đáp</span></h2></div>
+  <div class="head-row rv mb6"><h2 class="mid2">Hỏi <span>đáp</span></h2></div>
   <div class="faq rv">
     <details><summary>Một phiên diễn ra như thế nào?</summary><p>Mỗi phiên 40 phút qua Zoom. Anh chị mang đến một chủ đề đang trăn trở. Chúng ta cùng làm rõ điều anh chị muốn, nhìn lại hiện trạng, các lựa chọn, và chốt một bước làm được ngay.</p></details>
     <details><summary>Nội dung phiên có được bảo mật không?</summary><p>Có. Tôi giữ bảo mật nội dung mọi phiên khai vấn theo chuẩn đạo đức nghề khai vấn.</p></details>
@@ -441,6 +460,7 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
   </div>
   <div class="btns rv">${BTN_CAL}</div>
 </div></section>
+<a class="float" href="${C.calendly}" target="_blank" rel="noopener" aria-label="Đặt lịch khai vấn">${CAL}<span>Đặt lịch khai vấn</span></a>
 `,
 };
 
@@ -475,9 +495,9 @@ ${pageHero({ eyebrow: 'Khai vấn · Team Coaching', l1: 'Team', l2: 'Coaching',
   </ul>
 </div></section>
 
-<section class="band band-navy on-navy"><div class="col stack" style="gap:36px">
+<section class="band band-navy on-navy"><div class="col stack g36">
   <div class="media2 rev">
-    <div class="rv stack" style="gap:16px">
+    <div class="rv stack g16">
       <span class="eyebrow">Một buổi Action Learning</span>
       <h2 class="mid2">Diễn ra <span>thế nào</span></h2>
       <p>Cả nhóm cùng đi từ một vấn đề thật đến những cam kết hành động cụ thể, và mỗi người mang về bài học cho riêng mình.</p>
@@ -489,18 +509,18 @@ ${pageHero({ eyebrow: 'Khai vấn · Team Coaching', l1: 'Team', l2: 'Coaching',
 
 <section class="band band-white"><div class="col">
   <div class="media2">
-    <div class="rv stack" style="gap:16px">
+    <div class="rv stack g16">
       <h2 class="mid2">Nền tảng <span>WIAL</span></h2>
       <ul class="certs one"><li><span class="org">WIAL · 2024</span><strong>Certified Action Learning Coach (CALC)</strong><span>World Institute for Action Learning</span></li></ul>
       <p class="note">Tôi được đào tạo và chứng nhận theo phương pháp Action Learning của WIAL (World Institute for Action Learning), tổ chức chứng nhận Action Learning Coach trên toàn cầu.</p>
       <p><a class="more" href="${C.wialProfile}" target="_blank" rel="noopener">Xem hồ sơ coach của tôi trên trang WIAL →</a></p>
     </div>
-    <figure class="m tall rv" style="max-width:380px;justify-self:center"><img src="assets/img/wial-viet-nam.jpg" alt="Nguyễn Minh Thắng cùng anh Nguyễn Duy Minh, Giám đốc WIAL Việt Nam" width="900" height="1200" loading="lazy"><figcaption>Cùng anh Nguyễn Duy Minh, Trưởng đại diện, Giám đốc WIAL Việt Nam, WIAL Master Coach &amp; Mentor</figcaption></figure>
+    <figure class="m tall rv fig-wial"><img src="assets/img/wial-viet-nam.jpg" alt="Nguyễn Minh Thắng cùng anh Nguyễn Duy Minh, Giám đốc WIAL Việt Nam" width="900" height="1200" loading="lazy"><figcaption>Cùng anh Nguyễn Duy Minh, Trưởng đại diện, Giám đốc WIAL Việt Nam, WIAL Master Coach &amp; Mentor</figcaption></figure>
   </div>
 </div></section>
 
 <section class="band band-cream"><div class="col narrow stack">
-  <div class="head-row rv" style="margin-bottom:6px"><h2 class="mid2">Hỏi <span>đáp</span></h2></div>
+  <div class="head-row rv mb6"><h2 class="mid2">Hỏi <span>đáp</span></h2></div>
   <div class="faq rv">
     <details><summary>Action Learning khác một buổi họp giải quyết vấn đề thế nào?</summary><p>Buổi họp thường tập trung tìm ra giải pháp nhanh. Action Learning dành thời gian đặt câu hỏi để hiểu đúng vấn đề, và luôn có phần nhìn lại để cả nhóm học được cách làm việc tốt hơn.</p></details>
     <details><summary>Ai nên tham gia?</summary><p>Những người liên quan đến vấn đề hoặc có góc nhìn khác nhau về nó, thường là đội ngũ quản lý hoặc nhóm dự án từ nhiều bộ phận.</p></details>
@@ -522,7 +542,7 @@ ${pageHero({ eyebrow: 'Chia sẻ về AI và nghề đào tạo', l1: 'Bài', l2
   intro: 'Tôi viết về cách người làm L&amp;D dùng AI vào công việc thật, và những nền tảng của nghề giảng dạy. Các bài được đăng trên L&amp;D AI Skill Hub.',
   buttons: `<a class="btn btn-o" href="${C.hub}/hoc/" target="_blank" rel="noopener">Đọc trên L&amp;D AI Skill Hub ↗</a>` })}
 
-<section class="band band-white"><div class="col narrow stack" style="gap:48px">
+<section class="band band-white"><div class="col narrow stack g48">
   ${seriesOrder.map((s) => `<div class="rv"><p class="series">${s}</p><ul class="articles">${ARTICLES.filter((a) => a.s === s).map(artLink).join('')}</ul></div>`).join('\n  ')}
 </div></section>
 `,
@@ -537,13 +557,15 @@ const contact = {
   active: 'lien-he',
   body: `
 ${pageHero({ eyebrow: 'Kết nối với tôi', l1: 'Liên', l2: 'hệ',
-  intro: 'Anh chị muốn trao đổi về một chương trình cho đội ngũ, một buổi chia sẻ, hay một phiên khai vấn, cứ nhắn cho tôi.',
-  buttons: BTN_CAL, img: 'tach-nen-chap-tay.webp', alt: 'Nguyễn Minh Thắng', w: 591, h: 1300 })}
+  intro: 'Anh chị muốn trao đổi về một chương trình cho đội ngũ, một buổi chia sẻ, hay đơn giản là kết nối và học hỏi cùng nhau, cứ nhắn cho tôi.',
+  buttons: `<a class="btn btn-o" href="#ho-so">Nhận hồ sơ năng lực</a>`, img: 'tach-nen-chap-tay.webp', alt: 'Nguyễn Minh Thắng', w: 591, h: 1300 })}
 
-<section class="band band-cream"><div class="col narrow stack" style="gap:28px">
+<section class="band band-cream"><div class="col narrow stack g28">
   <div class="ways rv">
     <div><small>Email</small><div class="copy"><code id="mail">${C.email}</code><button type="button" class="mini" data-copy="mail">Chép</button></div></div>
     <div><small>LinkedIn</small><b><a href="${C.linkedin}" target="_blank" rel="noopener">${C.linkedinText}</a></b></div>
+    <div><small>Fanpage Facebook</small><b><a href="${C.fanpage}" target="_blank" rel="noopener">Theo dõi trên Facebook ↗</a></b></div>
+    <div><small>Nhóm cộng đồng Zalo</small><b><a href="${C.zalo}" target="_blank" rel="noopener">Tham gia nhóm Zalo ↗</a></b></div>
   </div>
   <div class="profile-box rv" id="ho-so">
     <h2>Nhận hồ sơ <span>năng lực</span></h2>

@@ -135,11 +135,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:980px){.about .col{grid-template-columns:minmax(0,1fr) 260px}.about .ttl{grid-column:1/-1;padding-bottom:0}.about .txt{padding-bottom:40px}}
 @media (max-width:620px){.about .col{grid-template-columns:1fr}.about .photo{max-width:260px;margin:0 auto}}
 .chapters{list-style:none;margin:0;padding:0}
-.chapters li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid var(--line)}
-.chapters small{font:700 12px var(--sans);letter-spacing:.12em;color:var(--orange-dark);text-transform:uppercase;padding-top:4px}
+.chapters li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;align-items:center;padding:14px 0;border-top:1px solid var(--line)}
+.chapters li:last-child{border-bottom:1px solid var(--line)}
+.chapters b{font:800 30px/1 var(--display);color:var(--orange)}
 .chapters a{color:var(--navy);font-weight:700;text-decoration:none}
 .chapters a:hover{color:var(--orange-dark)}
-@media (max-width:480px){.chapters li{grid-template-columns:1fr;gap:0}}
+
 
 /* ---------- lưới chương trình có biểu tượng ---------- */
 .prog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 40px}
@@ -272,9 +273,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:720px){.prog-card{grid-template-columns:1fr}}
 
 /* ---------- các bước đánh số ---------- */
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(var(--n,5),minmax(0,1fr));gap:14px;counter-reset:s}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.steps.n4{grid-template-columns:repeat(4,minmax(0,1fr))}
 .steps li{position:relative;border-radius:16px;padding:22px 18px 20px;background:#fff;border:1px solid var(--line);min-width:0}
-.steps li::after{content:"";position:absolute;left:18px;right:18px;bottom:0;height:4px;border-radius:2px 2px 0 0;background:var(--orange);opacity:calc(.25 + var(--i,1) * .15)}
+.steps li::after{content:"";position:absolute;left:18px;right:18px;bottom:0;height:4px;border-radius:2px 2px 0 0;background:var(--orange);opacity:.35}
+.steps li:nth-child(2)::after{opacity:.5}.steps li:nth-child(3)::after{opacity:.65}.steps li:nth-child(4)::after{opacity:.8}.steps li:nth-child(5)::after{opacity:1}
+.steps.n4 li:nth-child(4)::after{opacity:1}
 .steps b{font:800 46px/1 var(--display);color:var(--orange);display:block}
 .steps strong{color:var(--navy);font-size:16px;display:block;margin-top:8px;line-height:1.35}
 .steps span{color:var(--muted);font-size:14px;line-height:1.45;display:block;margin-top:4px}
@@ -368,3 +372,34 @@ details p{color:var(--body);font-size:16px}
   .rv-on .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .rv-on .rv.in{opacity:1;transform:none}
 }
+
+/* ---------- tiện ích (thay cho style nội tuyến, vì CSP chặn) ---------- */
+.w{color:#fff}.tbody{color:var(--body)}.tor{color:var(--orange)}
+.g16{gap:16px}.g18{gap:18px}.g28{gap:28px}.g36{gap:36px}.g48{gap:48px}
+.mb6{margin-bottom:6px}.mt16{margin-top:16px}.mt20{margin-top:20px}.mt28{margin-top:28px}.mt44{margin-top:44px}
+.band-tight{padding-block:48px}.smt{scroll-margin-top:70px}
+.fig-wial{max-width:380px;justify-self:center}
+.hero .eyebrow{color:var(--orange)}
+
+/* ---------- khối Khai vấn trang chủ: 2 ảnh ghép + nội dung ---------- */
+.coach-home{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.coach-home .txt{display:flex;flex-direction:column;gap:22px;min-width:0}
+.collage{position:relative;min-height:560px}
+.collage img{position:absolute;object-fit:cover;border-radius:18px;box-shadow:0 22px 50px rgba(10,22,52,.25)}
+.collage .c1{left:0;top:0;width:62%;height:78%;object-position:top}
+.collage .c2{right:0;bottom:0;width:62%;height:52%;border:6px solid var(--cream)}
+.collage::before{content:"";position:absolute;left:-18px;bottom:22px;width:120px;height:120px;border-radius:50%;background:var(--orange);opacity:.9}
+@media (max-width:860px){.coach-home{grid-template-columns:1fr;gap:36px}.collage{min-height:440px;max-width:520px;width:100%;margin:0 auto}}
+@media (max-width:480px){.collage{min-height:360px}}
+
+/* ---------- khối câu nói trên ảnh ---------- */
+.quote-bg{background-color:var(--navy-deep);background-image:linear-gradient(rgba(10,22,52,.86),rgba(10,22,52,.86)),url(img/coaching-trao-doi.jpg)}
+
+/* ---------- Kết nối với tôi ---------- */
+.social{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;border-top:1px solid var(--navy-line);padding-top:24px}
+.social a{display:flex;flex-direction:column;gap:4px;border:1px solid var(--navy-line);border-radius:14px;padding:16px 18px;text-decoration:none;color:#fff;min-width:0}
+.social a:hover{border-color:var(--orange);color:#fff}
+.social small{font:800 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+.social b{font-size:15px;word-break:break-word}
+@media (max-width:900px){.social{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.social{grid-template-columns:1fr}}
