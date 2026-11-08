@@ -9,7 +9,8 @@ const C = {
   email: 'thangnm.ypt@gmail.com',
   linkedin: 'https://www.linkedin.com/in/thangaiskill',
   linkedinText: 'linkedin.com/in/thangaiskill',
-  calendly: 'https://calendly.com/thangnm-ypt/peer-coaching-40min',
+  calendly: 'https://calendly.com/thangnm-ypt/trai-nghiem-khai-van',
+  peerCoaching: 'https://calendly.com/thangnm-ypt/peer-coaching-40min',
   hub: 'https://ldskillhub.com',
   fanpage: 'https://www.facebook.com/profile.php?id=100066461480224',
   zalo: 'https://zalo.me/g/0j7jkkc2txkw2nokfqhf',
@@ -161,7 +162,8 @@ function pageHero({ eyebrow, l1, l2, sub, intro, buttons = '', img, alt, kind = 
   ${pic}
 </div></section>`;
 }
-const BTN_CAL = `<a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch khai vấn</a>`;
+const BTN_CAL = `<a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch trải nghiệm khai vấn</a>`;
+const btnPeer = (cls) => `<a class="btn ${cls}" href="${C.peerCoaching}" target="_blank" rel="noopener">Đặt lịch Peer coaching</a>`;
 const BTN_CONTACT = `<a class="btn btn-o" href="lien-he.html">Liên hệ trao đổi</a>`;
 const BTN_PROFILE = `<a class="btn btn-w" href="lien-he.html#ho-so">Nhận hồ sơ năng lực</a>`;
 const stepsHtml = (arr, n) => `<ol class="steps rv n${n}">${arr.map(([t, d], i) => `<li><b>${i + 1}</b><div><strong>${t}</strong><span>${d}</span></div></li>`).join('')}</ol>`;
@@ -190,7 +192,7 @@ const home = {
     <h2 class="big2">Tôi là <span>ai</span></h2>
     <div class="tbody">
       <p>Tôi là Nguyễn Minh Thắng, một kỹ sư công nghệ chuyển sang nghề đào tạo và phát triển con người từ năm 2014. Hơn 11 năm qua, tôi đã trải qua nhiều kinh nghiệm về đào tạo, huấn luyện, phát triển và khai vấn tại FPT, MB Group và Techcombank.</p>
-      <p>Hiện nay, tôi làm việc ở ba vai trò. Tôi là giảng viên các chương trình về hiệu quả cá nhân, lãnh đạo và ứng dụng AI. Tôi là coach khai vấn 1-1, được đào tạo theo chuẩn năng lực ICF, và là Action Learning Coach được WIAL chứng nhận. Tôi cũng xây dựng và phát triển các giải pháp AI: tác giả L&amp;D AI Skill Hub, thư viện AI skill miễn phí dành cho người làm L&amp;D, và tác giả framework CAPTURE, giúp biến kinh nghiệm chuyên môn thành các AI skill dùng được trên nhiều nền tảng AI tạo sinh.</p>
+      <p>Hiện nay, tôi làm việc ở ba vai trò:</p>
     </div>
   </div>
   <div class="roles3 rv">
@@ -417,7 +419,7 @@ const coaching = {
   body: `
 ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', sub: 'Khai vấn theo trường phái hiệu quả bền vững và thói quen',
   intro: 'Đồng hành 1:1 dựa trên nền tảng trí tuệ cảm xúc, theo chuẩn năng lực ICF, để cùng anh chị khám phá suy nghĩ, nhìn lại những trăn trở dưới lăng kính của các nguyên lý hiệu quả, từ đó tìm cơ hội xây dựng những thay đổi duy trì được lâu dài trong công việc và cuộc sống.',
-  buttons: BTN_CAL, img: 'coaching-lang-nghe.jpg', alt: 'Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn', kind: 'framed', w: 900, h: 1125 })}
+  buttons: BTN_CAL + btnPeer('btn-w'), img: 'coaching-lang-nghe.jpg', alt: 'Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn', kind: 'framed', w: 900, h: 1125 })}
 
 <section class="band band-white"><div class="col narrow stack">
   <div class="head-row rv mb6"><h2 class="mid2">Khai vấn <span>là gì</span></h2></div>
@@ -475,9 +477,9 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
     <details><summary>Nội dung phiên có được bảo mật không?</summary><p>Có. Tôi giữ bảo mật nội dung mọi phiên khai vấn theo chuẩn đạo đức nghề khai vấn.</p></details>
     <details><summary>Vì sao các phiên hiện đang miễn phí?</summary><p>Tôi đang tích lũy giờ thực hành khai vấn. Các phiên miễn phí là cơ hội để anh chị trải nghiệm khai vấn, và để tôi tiếp tục học hỏi.</p></details>
   </div>
-  <div class="btns rv">${BTN_CAL}</div>
+  <div class="btns rv">${BTN_CAL}${btnPeer('btn-n')}</div>
 </div></section>
-<a class="float" href="${C.calendly}" target="_blank" rel="noopener" aria-label="Đặt lịch khai vấn">${CAL}<span>Đặt lịch khai vấn</span></a>
+<a class="float" href="${C.calendly}" target="_blank" rel="noopener" aria-label="Đặt lịch trải nghiệm khai vấn">${CAL}<span>Đặt lịch khai vấn</span></a>
 `,
 };
 
