@@ -41,21 +41,21 @@ const MONTH = 'Tháng 10/2026';
 const artLink = (a) => `<li><a href="${C.hub}/hoc/${a.slug}/" target="_blank" rel="noopener"><time>${MONTH}</time><span>${a.t}</span><span class="arr" aria-hidden="true">→</span></a></li>`;
 
 const PROGRAMS = [
-  { id: 'ca-nhan', name: 'Ứng dụng AI nâng cao hiệu quả cá nhân', q: 'Đã thử AI nhưng chưa thành thói quen?', for: 'Dành cho chuyên gia và người đi làm',
-    what: 'Chuyển từ hỏi-đáp rời rạc sang ứng dụng AI có phương pháp trong công việc hằng ngày.',
-    items: ['Khung câu lệnh và cách kiểm chứng đầu ra', 'Xử lý văn bản, tổng hợp dữ liệu, lập kế hoạch cùng AI', 'Đóng gói kinh nghiệm thành AI skill dùng lại được', 'Thói quen làm việc hiệu quả cùng AI'],
-    result: 'Ra về với ít nhất một AI skill chạy được trên việc thật của mình.' },
-  { id: 'lanh-dao', name: 'Ứng dụng AI nâng cao hiệu quả lãnh đạo', q: 'Muốn đội ngũ dùng AI nhưng chưa biết bắt đầu từ đâu?', for: 'Dành cho lãnh đạo và quản lý',
-    what: 'Dùng AI để ra quyết định, giao việc và phát triển đội ngũ hiệu quả hơn.',
-    items: ['Tư duy lãnh đạo trong thời AI', 'AI trong lập kế hoạch, giao việc và theo dõi hiệu suất', 'Thiết lập trợ lý AI cho nhà quản lý'],
+  { id: 'ca-nhan', name: 'Ứng dụng AI nâng cao hiệu quả cá nhân', q: 'Đã thử AI nhưng vẫn chưa có thêm thời gian cho những điều quan trọng.', for: 'Dành cho chuyên gia và người đi làm',
+    what: 'Chuyển từ sử dụng ngẫu hứng sang ứng dụng AI có tư duy và phương pháp để nâng cao năng suất.',
+    items: ['Hiểu biết nền tảng về AI', 'Kỹ thuật giao tiếp hiệu quả với AI', 'Xây dựng ứng dụng AI dựa trên bài toán cá nhân hằng ngày', 'Thiết kế thói quen làm việc hiệu quả cùng AI'],
+    result: 'Ra về với những use case chạy được trên việc thật của mình.' },
+  { id: 'lanh-dao', name: 'Ứng dụng AI nâng cao hiệu quả lãnh đạo', q: 'Muốn sử dụng AI để dẫn dắt đội ngũ nhưng chưa biết bắt đầu từ đâu.', for: 'Dành cho lãnh đạo và quản lý',
+    what: 'Xu hướng và tư duy lãnh đạo trong thời AI.',
+    items: ['Ứng dụng AI để tối ưu hóa năng suất cá nhân và phát triển đội ngũ', 'Xây dựng ứng dụng AI để tối ưu hóa năng suất cá nhân', 'Xây dựng ứng dụng AI để quản trị đội ngũ'],
     result: 'Tự thiết lập được quy trình quản trị đội ngũ có AI hỗ trợ.' },
-  { id: 'ld', name: 'Ứng dụng AI chuyển đổi L&D', q: 'Đội L&D ngập trong slide, khảo sát, báo cáo?', for: 'Dành cho người làm L&D và giảng viên nội bộ',
-    what: 'Đưa AI vào quy trình đào tạo và phát triển, từ phân tích nhu cầu đến đánh giá hiệu quả.',
-    items: ['Phân tích nhu cầu và thiết kế chương trình', 'Phát triển học liệu đồng bộ', 'Đo lường hiệu quả theo Kirkpatrick', 'Biến chuyên môn thành AI skill với phương pháp CAPTURE'],
+  { id: 'ld', name: 'Ứng dụng AI chuyển đổi L&D', q: 'L&D tốn nhiều thời gian phân tích nhu cầu và thiết kế chương trình, chưa theo kịp nhu cầu học tập thay đổi nhanh và thiếu thời gian hỗ trợ chuyển đổi hành vi, nâng cao hiệu suất.', for: 'Dành cho người làm L&D và giảng viên nội bộ',
+    what: 'Xu hướng AI trong đào tạo và phát triển.',
+    items: ['Chuyển dịch vai trò của L&D trong kỷ nguyên AI', 'Nhìn lại cách học của L&D', 'Nhìn lại cách giúp người khác học của L&D', 'Các ứng dụng nâng cao năng suất cho L&D'],
     result: 'Đội ngũ L&D rút ngắn thời gian thiết kế và phát triển chương trình.' },
-  { id: 'ttt', name: 'Train the Trainer (TTT)', sub: 'Giảng viên chuyên nghiệp', q: 'Giỏi chuyên môn nhưng chưa biết cách truyền đạt?', for: 'Dành cho chuyên gia, giảng viên nội bộ và người mới đứng lớp',
+  { id: 'ttt', name: 'Train the Trainer (TTT)', sub: 'Giảng viên chuyên nghiệp', q: 'Đã giảng dạy nhưng chưa tự tin về kỹ năng thiết kế và dẫn dắt đào tạo để truyền đạt hiệu quả, thu hút học viên và tạo ra thay đổi sau khóa học.', for: 'Dành cho chuyên gia, giảng viên nội bộ và người chuyển sang đào tạo chuyên nghiệp',
     what: 'Giúp người giỏi chuyên môn trở thành người dạy giỏi: thiết kế buổi học lấy người học làm trung tâm và dẫn dắt lớp học có tương tác.',
-    items: ['Thiết kế buổi học lấy người học làm trung tâm', 'Tương tác có chủ đích và coaching tại chỗ theo EDAC (Explain, Demonstrate, Apply, Consolidate)', 'Slide và học liệu đồng hành cùng giảng viên', 'Giúp học viên áp dụng điều đã học vào công việc', 'Dùng AI để chuẩn bị bài giảng nhanh hơn'],
+    items: ['Chân dung nhà đào tạo chuyên nghiệp', 'Phương pháp tiếp cận trong đào tạo', 'Kỹ năng thiết kế học tập', 'Kỹ năng giảng dạy và huấn luyện chuyên nghiệp', 'Ứng dụng AI để nâng cao hiệu quả thiết kế và giảng dạy'],
     result: 'Thiết kế và thực hành một buổi dạy hoàn chỉnh của chính mình.' },
 ];
 
@@ -69,10 +69,10 @@ const CAL = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width
 
 const NAV = [
   ['ve-toi.html', 'Về tôi', 've-toi', [['ve-toi.html#su-menh', 'Sứ mệnh'], ['ve-toi.html#hanh-trinh', 'Hành trình']]],
-  ['chuong-trinh.html', 'Chương trình', 'chuong-trinh'],
+  ['chuong-trinh.html', 'Khóa học', 'chuong-trinh'],
   ['coaching.html', 'Khai vấn', 'khai-van', [['coaching.html', '1-1 Coaching'], ['action-learning.html', 'Team Coaching (Action Learning)']]],
   [C.hub, 'AI cho L&amp;D ↗', 'ai-ld', null, true],
-  ['bai-viet.html', 'Bài viết', 'bai-viet'],
+  ['bai-viet.html', 'Tài nguyên', 'bai-viet'],
   ['lien-he.html', 'Liên hệ', 'lien-he'],
 ];
 
@@ -101,7 +101,7 @@ function contactBlock() {
     <a href="${C.zalo}" target="_blank" rel="noopener"><small>Nhóm cộng đồng Zalo</small><b>Tham gia nhóm Zalo ↗</b></a>
   </div>
   <div class="foot"><span>Greater Every Day · © 2026 Nguyễn Minh Thắng</span>
-    <nav aria-label="Chân trang"><a href="ve-toi.html">Về tôi</a><a href="chuong-trinh.html">Chương trình</a><a href="coaching.html">1-1 Coaching</a><a href="action-learning.html">Team Coaching (Action Learning)</a><a href="bai-viet.html">Bài viết</a><a href="lien-he.html">Liên hệ</a></nav>
+    <nav aria-label="Chân trang"><a href="ve-toi.html">Về tôi</a><a href="chuong-trinh.html">Khóa học</a><a href="coaching.html">1-1 Coaching</a><a href="action-learning.html">Team Coaching (Action Learning)</a><a href="bai-viet.html">Tài nguyên</a><a href="lien-he.html">Liên hệ</a></nav>
   </div>
 </div></footer>`;
 }
@@ -162,8 +162,8 @@ function pageHero({ eyebrow, l1, l2, sub, intro, buttons = '', img, alt, kind = 
   ${pic}
 </div></section>`;
 }
-const BTN_CAL = `<a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch trải nghiệm khai vấn</a>`;
-const btnPeer = (cls) => `<a class="btn ${cls}" href="${C.peerCoaching}" target="_blank" rel="noopener">Đặt lịch Peer coaching</a>`;
+const BTN_CAL = `<a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch trải nghiệm khai vấn dành cho Coachee</a>`;
+const btnPeer = (cls) => `<a class="btn ${cls}" href="${C.peerCoaching}" target="_blank" rel="noopener">Đặt lịch Peer coaching dành cho Coach</a>`;
 const BTN_CONTACT = `<a class="btn btn-o" href="lien-he.html">Liên hệ trao đổi</a>`;
 const BTN_PROFILE = `<a class="btn btn-w" href="lien-he.html#ho-so">Nhận hồ sơ năng lực</a>`;
 const stepsHtml = (arr, n) => `<ol class="steps rv n${n}">${arr.map(([t, d], i) => `<li><b>${i + 1}</b><div><strong>${t}</strong><span>${d}</span></div></li>`).join('')}</ol>`;
@@ -179,7 +179,7 @@ const home = {
     <span class="eyebrow tor">Xin chào, tôi là</span>
     <h1>Nguyễn Minh <span>Thắng</span></h1>
     <div class="roles"><span>Trainer</span><span>Coach</span><span>AI Builder</span></div>
-    <p class="mission-label">Sứ mệnh của tôi là</p>
+    <p class="mission-label">Sứ mệnh của tôi</p>
     <p class="motto">${C.mottoEn}</p>
     <p class="motto-vi">${C.mottoVi}</p>
     <div class="btns"><a class="btn btn-o" href="lien-he.html">Liên hệ trao đổi</a><a class="btn btn-w" href="chuong-trinh.html">Xem chương trình</a></div>
@@ -191,14 +191,14 @@ const home = {
   <div class="intro rv">
     <h2 class="big2">Tôi là <span>ai</span></h2>
     <div class="tbody">
-      <p>Tôi là Nguyễn Minh Thắng, một kỹ sư công nghệ chuyển sang nghề đào tạo và phát triển con người từ năm 2014. Hơn 11 năm qua, tôi đã trải qua nhiều kinh nghiệm về đào tạo, huấn luyện, phát triển và khai vấn tại FPT, MB Group và Techcombank.</p>
+      <p>Tôi là Nguyễn Minh Thắng, từ một kỹ sư công nghệ đã chuyển sang nghề đào tạo và phát triển con người từ năm 2014. Hơn 11 năm qua, tôi đã trải qua nhiều kinh nghiệm về đào tạo, huấn luyện, phát triển và khai vấn tại các tổ chức lớn như FPT, MB Group và Techcombank.</p>
       <p>Hiện nay, tôi làm việc ở ba vai trò:</p>
     </div>
   </div>
   <div class="roles3 rv">
-    <div class="role-card"><h3>Trainer</h3><p>Đào tạo các chương trình chuyển hóa và có tác động cao vào thực tiễn về Hiệu quả cá nhân, Lãnh đạo và ứng dụng AI.</p></div>
-    <div class="role-card"><h3>Coach</h3><p>Khai vấn ở nhiều cấp độ, gồm Khai vấn 1-1 theo chuẩn năng lực ICF và Khai vấn nhóm theo phương pháp Action Learning, chuẩn WIAL.</p></div>
-    <div class="role-card"><h3>AI Builder</h3><p>Thiết kế và xây dựng các giải pháp AI cho các bài toán thực tế. Tác giả L&amp;D AI Skill Hub, thư viện AI skill chuyên biệt dành cho người làm L&amp;D. Tác giả framework CAPTURE, giúp biến kỹ năng chuyên môn thành các AI skill dùng được trên mọi công cụ AI tạo sinh.</p></div>
+    <div class="role-card"><h3>Trainer</h3><p>Giảng viên chuyên nghiệp, đào tạo các chương trình chuyển hóa và có tác động cao vào thực tiễn về Hiệu quả cá nhân, Lãnh đạo và ứng dụng AI.</p></div>
+    <div class="role-card"><h3>Coach</h3><p>Nhà huấn luyện ở nhiều cấp độ, gồm Khai vấn 1-1 theo chuẩn năng lực ICF và Huấn luyện nhóm với phương pháp Action Learning theo tiêu chuẩn WIAL.</p></div>
+    <div class="role-card"><h3>AI Builder</h3><p>Nhà phát triển AI, chuyên thiết kế và xây dựng các giải pháp AI cho các bài toán thực tế. Tác giả L&amp;D AI Skill Hub, thư viện AI skill chuyên biệt dành cho người làm L&amp;D. Tác giả framework CAPTURE, giúp biến kỹ năng chuyên môn thành các AI skill dùng được trên mọi công cụ AI tạo sinh.</p></div>
   </div>
 </div></section>
 
@@ -214,10 +214,10 @@ const home = {
 <section class="band band-cream" aria-label="Tôi có thể giúp ai"><div class="col">
   <div class="head-row help-head rv"><h2 class="mid2">Tôi có thể giúp ai <span>và giúp được việc gì?</span></h2></div>
   <div class="forms help rv">
-    <a href="chuong-trinh.html#ld"><small>ĐỘI NGŨ HR VÀ L&amp;D</small><p>Giải phóng thời gian khỏi những việc lặp lại, để dành nhiều thời gian hơn cho con người.</p><span class="go">Tìm hiểu thêm →</span></a>
-    <a href="chuong-trinh.html#ttt"><small>CHUYÊN GIA VÀ GIẢNG VIÊN NỘI BỘ</small><p>Đứng lớp tự tin, truyền cảm hứng và tạo ra tác động thật.</p><span class="go">Tìm hiểu thêm →</span></a>
-    <a href="chuong-trinh.html#lanh-dao"><small>LÃNH ĐẠO VÀ NHÀ QUẢN LÝ</small><p>Dẫn dắt đội ngũ hiệu quả hơn và ứng dụng AI vào việc lãnh đạo đội ngũ.</p><span class="go">Tìm hiểu thêm →</span></a>
-    <a href="coaching.html"><small>CÁ NHÂN</small><p>Hiểu mình hơn và tiến bộ mỗi ngày thông qua khai vấn.</p><span class="go">Tìm hiểu thêm →</span></a>
+    <a href="chuong-trinh.html#ld"><small>TÔI GIÚP ĐỘI NGŨ HR VÀ L&amp;D</small><p>Giải phóng thời gian khỏi những việc lặp lại, để dành nhiều thời gian hơn cho con người.</p><span class="go">Tìm hiểu thêm →</span></a>
+    <a href="chuong-trinh.html#ttt"><small>TÔI GIÚP CHUYÊN GIA VÀ GIẢNG VIÊN NỘI BỘ</small><p>Đứng lớp tự tin, truyền cảm hứng và tạo ra tác động thực tiễn.</p><span class="go">Tìm hiểu thêm →</span></a>
+    <a href="chuong-trinh.html#lanh-dao"><small>TÔI GIÚP LÃNH ĐẠO VÀ NHÀ QUẢN LÝ</small><p>Phát triển năng lực lãnh đạo, dẫn dắt đội ngũ hiệu quả hơn và ứng dụng AI vào việc lãnh đạo đội ngũ.</p><span class="go">Tìm hiểu thêm →</span></a>
+    <a href="coaching.html"><small>TÔI GIÚP MỌI CÁ NHÂN</small><p>Thông suốt và hiểu mình hơn để đạt được mục tiêu trong công việc và cuộc sống thông qua khai vấn.</p><span class="go">Tìm hiểu thêm →</span></a>
   </div>
 </div></section>
 
@@ -225,7 +225,7 @@ const home = {
   <div class="ttl"><h2 class="big2">Về <span>tôi</span></h2></div>
   <div class="txt rv">
     <p class="lead">Kỹ sư công nghệ, hơn 11 năm làm nghề phát triển con người.</p>
-    <p>Với tôi, vượt trội không phải là hơn người khác, mà là vượt qua giới hạn của chính mình mỗi ngày, và giúp người bên cạnh nhận ra những khả năng tốt đẹp bên trong họ. Hành trình ấy đi qua bốn bước ngoặt:</p>
+    <p>Với tôi, vượt trội không phải là hơn người khác, mà là vượt qua giới hạn của chính mình mỗi ngày, và giúp người khác nhận ra những khả năng tốt đẹp bên trong họ. Đó cũng chính là sứ mệnh mà tôi nhận ra khi đi qua hành trình sự nghiệp với bốn bước ngoặt:</p>
     <ol class="chapters">
       <li><b>01</b><a href="ve-toi.html#chuyen-1">Từ kỹ sư công nghệ chuyển thành nhà đào tạo</a></li>
       <li><b>02</b><a href="ve-toi.html#chuyen-2">Trở thành nhà đào tạo, huấn luyện chuyên nghiệp</a></li>
@@ -238,11 +238,11 @@ const home = {
 </div></section>
 
 <section class="band band-navy on-navy"><div class="col">
-  <div class="head-row rv"><h2 class="big2">Chương <span>trình</span></h2><p>Bốn chương trình đào tạo, mỗi chương trình đi từ hiểu đến làm và kết thúc bằng một sản phẩm dùng được ngay trong công việc.</p></div>
+  <div class="head-row rv"><h2 class="big2">Chương <span>trình</span></h2><p>Các chương trình đào tạo, mỗi chương trình đi từ hiểu đến làm và kết thúc bằng một sản phẩm dùng được ngay trong công việc.</p></div>
   <div class="prog-grid rv">
-    ${PROGRAMS.map((p) => `<a class="prog-item" href="chuong-trinh.html#${p.id}"><span class="ico">${ICONS[p.id]}</span><div><h3>${p.name}${p.sub ? `<small>${p.sub}</small>` : ''}</h3><p class="q">${p.q}</p><p class="for">${p.for}</p></div></a>`).join('\n    ')}
+    ${PROGRAMS.map((p) => `<a class="prog-item" href="chuong-trinh.html#${p.id}"><span class="ico">${ICONS[p.id]}</span><div><h3>${p.sub || p.name}</h3><p class="q">${p.q}</p><p class="for">${p.for}</p></div></a>`).join('\n    ')}
   </div>
-  <div class="btns rv mt44"><a class="btn btn-o" href="chuong-trinh.html">Xem chi tiết chương trình</a><a class="btn btn-w" href="lien-he.html#ho-so">Nhận hồ sơ năng lực</a></div>
+  <div class="btns rv mt44"><a class="btn btn-o" href="chuong-trinh.html">Xem chi tiết chương trình</a><a class="btn btn-w" href="lien-he.html#ho-so">Nhận thông tin chương trình và hồ sơ năng lực</a></div>
 </div></section>
 
 <section class="band band-cream"><div class="col">
@@ -253,17 +253,18 @@ const home = {
     </div>
     <div class="txt rv">
       <h2 class="big2">Khai <span>vấn</span></h2>
-      <p class="tbody">Tôi khai vấn theo hướng hiệu quả bền vững và thói quen. Mục tiêu không phải là đưa ra lời khuyên, mà là giúp anh chị tự nhìn rõ điều mình muốn và biến nó thành hành động duy trì được.</p>
+      <p class="tbody">Đồng hành cùng anh chị để có được sự thông suốt và hiểu thấu bản thân. Mục tiêu không phải là đưa ra lời khuyên, mà là giúp anh chị tự nhìn rõ điều mình muốn và chuyển hóa thành những kết quả mong đợi trong công việc và cuộc sống.</p>
       <div class="forms">
-        <a href="coaching.html"><small>CHO CÁ NHÂN</small><h3>1-1 Coaching</h3><p>Dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF. Hiệu quả bền vững và thói quen.</p><span class="go">Tìm hiểu thêm →</span></a>
-        <a href="action-learning.html"><small>CHO NHÓM VÀ TỔ CHỨC</small><h3>Team Coaching (Action Learning)</h3><p>Theo phương pháp WIAL. Giải quyết vấn đề thật, phát triển năng lực cùng lúc.</p><span class="go">Tìm hiểu thêm →</span></a>
+        <a href="coaching.html"><small>CHO CÁ NHÂN</small><h3>1-1 Coaching</h3><p>Khai vấn dựa trên trí tuệ cảm xúc và theo chuẩn năng lực ICF. Chủ đề thế mạnh: trì hoãn, thói quen, phát triển bản thân và lãnh đạo.</p><span class="go">Tìm hiểu thêm →</span></a>
+        <a href="action-learning.html"><small>CHO NHÓM VÀ TỔ CHỨC</small><h3>Team Coaching (Action Learning)</h3><p>Theo phương pháp Học hành động (Action Learning) của WIAL. Giải quyết vấn đề thật của cá nhân hoặc tổ chức, phát triển năng lực cùng lúc, với nhóm 4–8 thành viên.</p><span class="go">Tìm hiểu thêm →</span></a>
       </div>
     </div>
   </div>
 </div></section>
 
 <section class="quote quote-bg"><div class="col">
-  <p class="rv">Biết điều đúng không đồng nghĩa <em>sống được</em> điều đúng.</p>
+  <p class="rv"><span class="ql">Biết điều đúng là kiến thức.</span> <span class="ql">Sống với điều đúng là <em>thói quen</em>.</span></p>
+  <p class="qsub rv">Tôi trân trọng cơ hội chia sẻ kiến thức, và hơn thế, mong được đồng hành để kiến tạo con người mới từ những thói quen.</p>
   <small>Nguyễn Minh Thắng · Greater Every Day</small>
 </div></section>
 
@@ -288,7 +289,7 @@ const about = {
   active: 've-toi',
   body: `
 ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con người', l1: 'Về', l2: 'tôi',
-  intro: 'Tôi là Nguyễn Minh Thắng (Thomas), trainer, coach và AI builder. Tôi bắt đầu sự nghiệp với máy móc và phần mềm, rồi dành hơn 11 năm cho đào tạo và phát triển con người tại FPT, MB Group và Techcombank.',
+  intro: 'Tôi là Nguyễn Minh Thắng (Thomas), trainer, coach và AI builder. Tôi bắt đầu sự nghiệp với công nghệ, rồi dành hơn 11 năm cho đào tạo và phát triển con người tại FPT, MB Group và Techcombank.',
   buttons: `<a class="btn btn-o" href="#hanh-trinh">Đọc hành trình</a><a class="btn btn-w" href="lien-he.html">Liên hệ trao đổi</a>`,
   img: 'tach-nen-khoanh-tay.webp', alt: 'Nguyễn Minh Thắng', w: 552, h: 1300 })}
 
@@ -297,8 +298,8 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
   <p class="mission-big rv">${C.mottoEn}</p>
   <p class="mission-vi rv">${C.mottoVi}</p>
   <div class="halves rv mt16">
-    <div><small>NỬA ĐẦU · VIỆC CỦA TÔI</small><h3>Trở nên vượt trội hơn mỗi ngày</h3><p>Tôi chọn chữ "greater" thay vì "better". Vượt trội không phải là hơn người khác, mà là vượt qua những giới hạn hiện tại của chính mình. Và "mỗi ngày" không có nghĩa ngày nào cũng phải có thành tựu lớn. Đôi khi, đó chỉ là duy trì một việc nhỏ mà mình biết là quan trọng.</p></div>
-    <div><small>NỬA SAU · LÝ DO TÔI LÀM NGHỀ</small><h3>Truyền cảm hứng cho người khác</h3><p>Tôi tin mỗi người đều có những khả năng tốt đẹp chưa được khám phá hoặc chưa có điều kiện phát huy. Mỗi lần đào tạo, khai vấn hay đồng hành cùng ai đó, tôi mong góp một phần để họ nhận ra khả năng ấy và tiến thêm một bước.</p></div>
+    <div><h3>Trở nên vượt trội hơn mỗi ngày</h3><p>Tôi chọn chữ "greater" thay vì "better". Vượt trội không phải là hơn người khác, mà là vượt qua những giới hạn hiện tại của chính mình. Và "mỗi ngày" không có nghĩa ngày nào cũng phải có thành tựu lớn. Đôi khi, đó chỉ là duy trì một việc nhỏ mà mình biết là quan trọng.</p></div>
+    <div><h3>Truyền cảm hứng cho người khác</h3><p>Tôi tin mỗi người đều có những khả năng tốt đẹp chưa được khám phá hoặc chưa có điều kiện phát huy. Mỗi lần đào tạo, khai vấn hay đồng hành cùng ai đó, tôi mong góp một phần để họ nhận ra khả năng ấy và tiến thêm một bước.</p></div>
   </div>
 </div></section>
 
@@ -317,11 +318,11 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
     <div class="rv">
       <h3>Từ kỹ sư công nghệ chuyển thành nhà đào tạo</h3>
       <div class="prose">
-        <p>Năm 2014, tôi là một kỹ thuật viên công nghệ thông tin. Công việc hằng ngày là máy móc và phần mềm: sự cố nào cũng có nguyên nhân, có cách sửa, và máy không cần được thuyết phục.</p>
-        <p>Rồi tôi xin thử sức ở vị trí giảng viên. Đó là một thử thách ba tháng: ai đáp ứng đủ yêu cầu sẽ ở lại làm giảng viên chính thức, ai chưa đủ sẽ quay về vị trí cũ.</p>
-        <p>Xuất phát điểm của tôi gần như không có lợi thế nào. Trình bày, thuyết phục, tạo ảnh hưởng đến người khác đều là điểm yếu của một người quen làm việc với máy. Thứ tôi có chỉ là sự chăm chỉ, tinh thần trách nhiệm, sự cẩn thận, chu đáo, ham học hỏi và mong muốn thật lòng giúp người học hiểu bài.</p>
-        <p>Ba tháng sau, tôi được giữ lại.</p>
-        <p>Nhìn lại, tôi hiểu điều giữ tôi ở lại không phải vì kỹ năng giảng dạy của tôi đã thay đổi hoàn toàn. Kỹ năng có thể học và rèn luyện thành thạo sau một thời gian. Còn sự tử tế, trách nhiệm và hết mình với công việc thì rất khó thay đổi ở một con người, và đó lại là những phẩm chất quan trọng nhất của người làm nghề đào tạo.</p>
+        <p>Năm 2014, sau khi nhận bằng kỹ sư công nghệ thông tin, tôi bắt đầu làm kỹ thuật viên hỗ trợ phần mềm tại FPT. Công việc hằng ngày là kiểm tra máy móc và phần mềm, khắc phục lỗi, nhận bảo hành. Công việc đúng ngành, nhưng tôi thấy ngày trôi qua trong sự lặp lại.</p>
+        <p>Nhìn các anh chị ở Trung tâm Đào tạo tràn đầy năng lượng trên lớp, chia sẻ nhiều kiến thức hữu ích, tôi ước một ngày mình cũng được đứng trước lớp học ấy. Rồi tôi lấy hết can đảm để xin thử sức ở vị trí giảng viên. Đó là một thử thách ba tháng: ai đáp ứng đủ yêu cầu sẽ ở lại làm giảng viên chính thức, ai chưa đủ sẽ quay về vị trí cũ.</p>
+        <p>Xuất phát điểm của tôi gần như không có lợi thế nào. Trình bày, thuyết phục, tạo ảnh hưởng đến người khác đều là điểm yếu của một người quen làm việc với máy móc. Thứ tôi có chỉ là tinh thần trách nhiệm, sự nghiêm túc, cẩn thận, chu đáo, ham học hỏi và mong muốn thật lòng giúp người học hiểu bài.</p>
+        <p>Ba tháng sau, tôi được giữ lại, nhưng không phải vì kỹ năng của tôi đã tốt hơn người khác.</p>
+        <p>Nhìn lại, tôi không bao giờ quên bài học ấy: kỹ năng có thể học và rèn luyện thành thạo sau một thời gian. Còn sự tử tế, trách nhiệm và hết mình với công việc thì rất khó thay đổi ở một con người, và đó lại là những phẩm chất quan trọng nhất của người làm nghề đào tạo.</p>
       </div>
       <p class="lesson">Điều quan trọng nhất ở một người giảng viên không bắt đầu từ kỹ năng, mà từ phẩm chất bên trong: trách nhiệm, tử tế, ham học hỏi và mong muốn giúp đỡ người khác.</p>
     </div>
@@ -332,10 +333,10 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
     <div class="rv">
       <h3>Trở thành nhà đào tạo, huấn luyện chuyên nghiệp</h3>
       <div class="prose">
-        <p>Sau khi được giữ lại, tôi biết mình mới chỉ đi những bước đầu tiên. Những năm tiếp theo, ở vai trò quản lý đào tạo rồi giảng viên nội bộ tại MB Group, tôi tập trung học hỏi và củng cố các kỹ năng để trở thành một nhà đào tạo, huấn luyện chuyên nghiệp.</p>
-        <p>Tôi đặt cho mình hai mục tiêu cho mỗi lớp học. Thứ nhất, lớp học phải có năng lượng và cảm hứng, để người học muốn tham gia chứ không chỉ ngồi nghe. Thứ hai, quan trọng hơn, người học phải áp dụng được vào công việc và tạo ra kết quả thực tế.</p>
+        <p>Bắt đầu hành trình làm nghề đào tạo, tôi biết mình mới chỉ đi những bước đầu tiên. Những năm tiếp theo, ở Phong Vũ rồi MB Group, tôi tập trung học hỏi và củng cố các kỹ năng để trở thành một nhà đào tạo, huấn luyện chuyên nghiệp.</p>
+        <p>Với mỗi lớp học, tôi nỗ lực hướng đến hai điều. Thứ nhất, lớp học phải có năng lượng và cảm hứng, để người học muốn tham gia chứ không chỉ ngồi nghe. Thứ hai, quan trọng hơn, người học phải áp dụng được vào công việc và tạo ra kết quả thực tế.</p>
       </div>
-      <p class="lesson">Một lớp học không kết thúc khi hết giờ. Nó chỉ thật sự hoàn thành khi người học mang được điều đã học vào công việc.</p>
+      <p class="lesson">Một lớp học không kết thúc khi hết giờ. Nó chỉ thật sự hoàn thành khi người học mang được điều đã học vào công việc và đạt được kết quả.</p>
     </div>
   </article>
 
@@ -363,7 +364,7 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
         <p>Tôi dành một tháng, nhiều đêm thức muộn, để nghiên cứu phương pháp, viết từng skill và tự xây một website để chia sẻ. Từ đó có phương pháp CAPTURE và L&amp;D AI Skill Hub, thư viện AI skill miễn phí cho người làm L&amp;D.</p>
         <p>Người kỹ sư công nghệ năm nào và người làm nghề phát triển con người hôm nay, cuối cùng đã gặp lại nhau.</p>
       </div>
-      <p class="lesson">AI có thể gánh bớt việc lặp lại, nhưng chỉ khi nó hiểu cách chúng ta làm việc.</p>
+      <p class="lesson">Trong kỷ nguyên AI, chúng ta cần vừa hiểu về AI, vừa hiểu về con người.</p>
     </div>
   </article>
 </div></section>
@@ -388,11 +389,11 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
 /* ============ CHƯƠNG TRÌNH ============ */
 const programs = {
   title: 'Chương trình · Nguyễn Minh Thắng',
-  desc: 'Bốn chương trình đào tạo: ứng dụng AI cho cá nhân, nhà lãnh đạo, đội ngũ L&D, và Train the Trainer.',
+  desc: 'Các chương trình đào tạo: ứng dụng AI cho cá nhân, nhà lãnh đạo, đội ngũ L&D, và Train the Trainer.',
   active: 'chuong-trinh',
   body: `
-${pageHero({ eyebrow: 'Bốn chương trình đào tạo', l1: 'Chương', l2: 'trình',
-  intro: 'Biết thêm một phương pháp chưa chắc tạo ra thay đổi. Vì vậy mỗi chương trình đều đi từ hiểu đến làm, thực hành trên bài toán thật của người học, và kết thúc bằng một sản phẩm dùng được ngay trong công việc.',
+${pageHero({ eyebrow: 'Các chương trình đào tạo', l1: 'Chương', l2: 'trình',
+  intro: 'Các chương trình lấy nền tảng là các nguyên lý của con người và được tăng tốc bởi AI.',
   buttons: BTN_CONTACT + BTN_PROFILE, img: 'tach-nen-chinh-tay-ao.webp', alt: 'Nguyễn Minh Thắng', w: 570, h: 1300 })}
 
 <section class="band band-cream"><div class="col stack g28">
@@ -406,7 +407,7 @@ ${pageHero({ eyebrow: 'Bốn chương trình đào tạo', l1: 'Chương', l2: '
 
 <section class="band band-navy on-navy"><div class="col">
   <div class="head-row rv"><h2 class="big2">Nhịp <span>học</span></h2><p>Mỗi nội dung trong chương trình đi qua năm bước, và kết thúc bằng kế hoạch thực hành 21–30 ngày sau lớp học.</p></div>
-  ${stepsHtml([['Hiểu', 'Nắm nguyên lý và khung phương pháp'], ['Xem mẫu', 'Quan sát cách làm chuẩn'], ['Làm theo', 'Thực hành có hướng dẫn'], ['Tự làm', 'Áp dụng vào việc của mình'], ['Làm cùng nhóm', 'Chia sẻ, phản hồi, nhân rộng']], 5)}
+  ${stepsHtml([['Hiểu', 'Nắm nguyên lý và khung phương pháp'], ['Quan sát', 'Quan sát cách làm chuẩn'], ['Làm theo', 'Thực hành có hướng dẫn'], ['Tự làm', 'Áp dụng vào việc của mình'], ['Làm cùng nhóm', 'Chia sẻ, phản hồi, nhân rộng']], 5)}
 </div></section>
 `,
 };
@@ -417,7 +418,7 @@ const coaching = {
   desc: 'Khai vấn 1-1 theo trường phái hiệu quả bền vững và thói quen, dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF.',
   active: 'khai-van',
   body: `
-${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', sub: 'Khai vấn theo trường phái hiệu quả bền vững và thói quen',
+${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', sub: 'Khai vấn dựa trên trí tuệ cảm xúc và theo chuẩn năng lực ICF. Chủ đề thế mạnh: trì hoãn, thói quen, phát triển bản thân và lãnh đạo.',
   intro: 'Đồng hành 1:1 dựa trên nền tảng trí tuệ cảm xúc, theo chuẩn năng lực ICF, để cùng anh chị khám phá suy nghĩ, nhìn lại những trăn trở dưới lăng kính của các nguyên lý hiệu quả, từ đó tìm cơ hội xây dựng những thay đổi duy trì được lâu dài trong công việc và cuộc sống.',
   buttons: BTN_CAL + btnPeer('btn-w'), img: 'coaching-lang-nghe.jpg', alt: 'Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn', kind: 'framed', w: 900, h: 1125 })}
 
@@ -434,8 +435,8 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
 <section class="band band-cream"><div class="col narrow">
   <div class="head-row rv"><h2 class="mid2">Phù hợp <span>nếu anh chị</span></h2></div>
   <ul class="bullets rv">
-    <li>Muốn thay đổi một thói quen nhưng chưa duy trì được</li>
-    <li>Thấy mình bận rộn nhưng chưa thật sự hiệu quả</li>
+    <li>Có một trăn trở trong công việc hay cuộc sống, muốn được lắng nghe và nhìn lại để có được sự thông suốt</li>
+    <li>Đang hoặc sắp trải qua một giai đoạn chuyển đổi quan trọng trong cuộc sống và sự nghiệp</li>
     <li>Có một trăn trở trong công việc hay cuộc sống muốn được lắng nghe và nhìn lại</li>
   </ul>
 </div></section>
@@ -456,7 +457,7 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
 </div></section>
 
 <section class="band band-white"><div class="col">
-  <div class="head-row rv"><h2 class="mid2">Một phiên <span>diễn ra thế nào</span></h2><p>40 phút qua Zoom. Tôi đang tích lũy giờ thực hành khai vấn, nên các phiên hiện tại miễn phí.</p></div>
+  <div class="head-row rv"><h2 class="mid2">Một phiên <span>diễn ra thế nào</span></h2><p>40–60 phút qua Zoom hoặc gặp trực tiếp tại địa điểm thuận tiện.</p></div>
   ${stepsHtml([['Chọn chủ đề', 'Anh chị mang đến một điều đang trăn trở'], ['Làm rõ điều muốn', 'Thành công trông như thế nào với anh chị'], ['Nhìn lại và mở lựa chọn', 'Hiện trạng, điều cản trở, các hướng đi'], ['Chốt một bước', 'Một hành động nhỏ làm được ngay']], 4)}
   <p class="callout rv mt28"><b>Khai vấn không phải là trị liệu.</b> Khai vấn không thay thế trị liệu tâm lý hay tư vấn y tế. Nếu nhận thấy anh chị cần một sự hỗ trợ chuyên sâu hơn, tôi sẽ nói rõ và gợi ý anh chị tìm đến chuyên gia phù hợp.</p>
 </div></section>
@@ -466,16 +467,16 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
   <ul class="certs rv">
     <li><span class="org">LCV</span><strong>Leap Coaching Essentials (ICF Level 1)</strong><span>Đào tạo theo chuẩn năng lực ICF, nền tảng trí tuệ cảm xúc</span></li>
     <li><span class="org">WIAL · 2024</span><strong>Certified Action Learning Coach (CALC)</strong><span>World Institute for Action Learning</span></li>
-    <li><span class="org">KHÁC</span><strong>Mental Health First Aider</strong><span>Thành viên Peer Coaching Việt Nam</span></li>
+    <li><span class="org">KHÁC</span><strong>Mental Health First Aider</strong></li>
   </ul>
 </div></section>
 
 <section class="band band-white"><div class="col narrow stack">
   <div class="head-row rv mb6"><h2 class="mid2">Hỏi <span>đáp</span></h2></div>
   <div class="faq rv">
-    <details><summary>Một phiên diễn ra như thế nào?</summary><p>Mỗi phiên 40 phút qua Zoom. Anh chị mang đến một chủ đề đang trăn trở. Chúng ta cùng làm rõ điều anh chị muốn, nhìn lại hiện trạng, các lựa chọn, và chốt một bước làm được ngay.</p></details>
+    <details><summary>Một phiên diễn ra như thế nào?</summary><p>Mỗi phiên 40–60 phút qua Zoom hoặc gặp trực tiếp tại địa điểm thuận tiện. Anh chị mang đến một chủ đề đang trăn trở. Chúng ta cùng làm rõ điều anh chị muốn, nhìn lại hiện trạng, các lựa chọn, và chốt một bước làm được ngay.</p></details>
     <details><summary>Nội dung phiên có được bảo mật không?</summary><p>Có. Tôi giữ bảo mật nội dung mọi phiên khai vấn theo chuẩn đạo đức nghề khai vấn.</p></details>
-    <details><summary>Vì sao các phiên hiện đang miễn phí?</summary><p>Tôi đang tích lũy giờ thực hành khai vấn. Các phiên miễn phí là cơ hội để anh chị trải nghiệm khai vấn, và để tôi tiếp tục học hỏi.</p></details>
+    <details><summary>Các phiên có chi phí như thế nào?</summary><p>Phiên đầu tiên là phiên trải nghiệm, miễn phí. Với các phiên tiếp theo, tôi sẽ trao đổi trực tiếp với anh chị về mức phí phù hợp sau phiên trải nghiệm.</p></details>
   </div>
   <div class="btns rv">${BTN_CAL}${btnPeer('btn-n')}</div>
 </div></section>
@@ -486,7 +487,7 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
 /* ============ TEAM COACHING (ACTION LEARNING) ============ */
 const al = {
   title: 'Team Coaching (Action Learning) · Nguyễn Minh Thắng',
-  desc: 'Team Coaching theo phương pháp Action Learning của WIAL: một nhóm cùng giải quyết vấn đề thật, phát triển năng lực lãnh đạo trong lúc làm.',
+  desc: 'Team Coaching theo phương pháp Action Learning của WIAL: một nhóm cùng giải quyết vấn đề thật, phát triển năng lực và đúc kết học hỏi ngay trong phiên.',
   active: 'khai-van',
   body: `
 ${pageHero({ eyebrow: 'Khai vấn · Team Coaching', l1: 'Team', l2: 'Coaching', sub: 'Action Learning · Giải quyết vấn đề thật, phát triển năng lực cùng lúc',
@@ -509,7 +510,7 @@ ${pageHero({ eyebrow: 'Khai vấn · Team Coaching', l1: 'Team', l2: 'Coaching',
   <div class="head-row rv"><h2 class="mid2">Phù hợp <span>khi</span></h2></div>
   <ul class="bullets rv">
     <li>Có một vấn đề phức tạp, nhiều bên liên quan, chưa có lời giải sẵn</li>
-    <li>Muốn phát triển đội ngũ quản lý trên chính công việc thật, thay vì chỉ học trên lớp</li>
+    <li>Muốn phát triển nhóm trên chính công việc thật, thay vì chỉ học trên lớp</li>
     <li>Cần các bộ phận cùng ngồi lại và nhìn vấn đề từ nhiều góc</li>
   </ul>
 </div></section>
