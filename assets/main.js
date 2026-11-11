@@ -11,6 +11,9 @@
     });
   }
 
+  // dải thông báo hết hạn thì ẩn
+  document.querySelectorAll('[data-until]').forEach(function(a){ if(Date.now()>Date.parse(a.getAttribute('data-until'))) a.hidden=true; });
+
   // nút chép
   document.querySelectorAll('[data-copy]').forEach(function(b){
     b.addEventListener('click',function(){

@@ -415,3 +415,10 @@ details p{color:var(--body);font-size:16px}
 @media (max-width:760px){.intro{grid-template-columns:1fr;margin-bottom:40px}.help{grid-template-columns:1fr}}
 .hero-note{border-left:3px solid var(--orange);padding:2px 0 2px 14px;font-style:italic;font-size:16px;line-height:1.6;color:var(--body);max-width:560px}
 .on-navy .hero-note{color:#fff}
+/* Dải thông báo sự kiện */
+.announce{display:block;background:var(--orange);color:#fff;text-decoration:none}
+.announce .col{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;padding-block:12px;text-align:center;font-size:15px}
+.announce b{font:800 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;background:var(--navy);padding:4px 10px;border-radius:999px}
+.announce em{font-style:normal;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.announce:hover{background:var(--orange-dark);color:#fff}
+.announce[hidden]{display:none}

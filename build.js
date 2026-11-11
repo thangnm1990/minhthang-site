@@ -40,6 +40,12 @@ const ARTICLES = [
 const MONTH = 'Tháng 10/2026';
 const artLink = (a) => `<li><a href="${C.hub}/hoc/${a.slug}/" target="_blank" rel="noopener"><time>${MONTH}</time><span>${a.t}</span><span class="arr" aria-hidden="true">→</span></a></li>`;
 
+/* Dải thông báo sự kiện dưới đầu trang chủ. Hết hạn thì build bỏ qua, và main.js ẩn ngay trên trình duyệt. */
+const ANNOUNCE = { until: '2026-11-19T21:00:00+07:00', label: 'Webinar 19/11', text: 'L&amp;D hạnh phúc trong thời AI · 19:30–21:00 · Online, miễn phí', cta: 'Đăng ký ↗',
+  url: 'https://ldskillhub.com/webinar/?utm_source=minhthangspace&amp;utm_medium=banner&amp;utm_campaign=webinar-1911' };
+const announceBar = () => (!ANNOUNCE || Date.now() > Date.parse(ANNOUNCE.until)) ? '' :
+  `<a class="announce" href="${ANNOUNCE.url}" target="_blank" rel="noopener" data-until="${ANNOUNCE.until}"><div class="col"><b>${ANNOUNCE.label}</b><span>${ANNOUNCE.text}</span><em>${ANNOUNCE.cta}</em></div></a>`;
+
 const PROGRAMS = [
   { id: 'ld', name: 'Ứng dụng AI chuyển đổi L&D', q: 'L&D tốn nhiều thời gian phân tích nhu cầu và thiết kế chương trình, chưa theo kịp nhu cầu học tập thay đổi nhanh và thiếu thời gian hỗ trợ chuyển đổi hành vi, nâng cao hiệu suất.', for: 'Dành cho lãnh đạo, quản lý L&D và HR',
     what: 'Xu hướng AI trong đào tạo và phát triển, và vai trò mới của L&D.',
@@ -200,6 +206,7 @@ const home = {
   <div class="cut"><img src="assets/img/tach-nen-chap-tay.webp" alt="Chân dung Nguyễn Minh Thắng" width="591" height="1300"></div>
 </div></section>
 
+${announceBar()}
 <section class="band band-white" aria-label="Tôi là ai"><div class="col">
   <div class="intro rv">
     <h2 class="big2">Tôi là <span>ai</span></h2>
