@@ -41,25 +41,37 @@ const MONTH = 'Tháng 10/2026';
 const artLink = (a) => `<li><a href="${C.hub}/hoc/${a.slug}/" target="_blank" rel="noopener"><time>${MONTH}</time><span>${a.t}</span><span class="arr" aria-hidden="true">→</span></a></li>`;
 
 const PROGRAMS = [
+  { id: 'ld', name: 'Ứng dụng AI chuyển đổi L&D', q: 'L&D tốn nhiều thời gian phân tích nhu cầu và thiết kế chương trình, chưa theo kịp nhu cầu học tập thay đổi nhanh và thiếu thời gian hỗ trợ chuyển đổi hành vi, nâng cao hiệu suất.', for: 'Dành cho lãnh đạo, quản lý L&D và HR',
+    what: 'Xu hướng AI trong đào tạo và phát triển, và vai trò mới của L&D.',
+    items: ['Chuyển dịch vai trò của L&D trong kỷ nguyên AI', 'Nhìn lại cách học của L&D', 'Nhìn lại cách giúp người khác học của L&D', 'Các ứng dụng nâng cao năng suất cho L&D'],
+    result: 'Có lộ trình đưa AI vào hoạt động L&D của đơn vị mình.' },
+  { id: 'skill', name: 'Xây dựng AI Skill cho L&D', sub: 'Một ngày tự tay xây AI skill cho công việc của chính mình', q: 'Dùng AI rời rạc, mỗi lần làm lại bắt đầu từ đầu và kết quả chung chung.', for: 'Dành cho người làm nhân sự, đào tạo ở mọi cấp và giảng viên nội bộ. Không cần biết lập trình.',
+    what: 'Đóng gói chuyên môn của chính anh chị thành AI skill theo phương pháp CAPTURE, dùng được trên ChatGPT, Claude và Gemini.',
+    items: ['Vì sao chuyển từ dùng AI rời rạc sang đóng gói chuyên môn thành skill', 'Chọn đầu việc nên AI hóa trong quy trình ADDIE', 'Phương pháp CAPTURE 7 bước: Choose, Aim, Probe, Translate, Underwrite, Review, Export', 'Thực hành xây skill đầu tiên trên đầu việc thật của mình', 'Làm việc nhóm: bộ skill cho đầu việc trọng điểm và kế hoạch thử nghiệm 30 ngày'],
+    result: 'Ra về với AI skill đầu tiên chạy được trên công việc thật, cùng bộ AI skill L&D cơ bản để dùng ngay.' },
+  { id: 'ttt', name: 'Giảng viên chuyên nghiệp trong kỷ nguyên AI', q: 'Đã giảng dạy nhưng chưa tự tin về kỹ năng thiết kế và dẫn dắt đào tạo để truyền đạt hiệu quả, thu hút học viên và tạo ra thay đổi sau khóa học.', for: 'Dành cho chuyên gia, giảng viên nội bộ và người chuyển sang đào tạo chuyên nghiệp',
+    what: 'Giúp người giỏi chuyên môn trở thành người dạy giỏi: thiết kế buổi học lấy người học làm trung tâm và dẫn dắt lớp học có tương tác.',
+    items: ['Chân dung nhà đào tạo chuyên nghiệp', 'Phương pháp tiếp cận trong đào tạo', 'Kỹ năng thiết kế học tập', 'Kỹ năng giảng dạy và huấn luyện chuyên nghiệp', 'Ứng dụng AI để nâng cao hiệu quả thiết kế và giảng dạy'],
+    result: 'Thiết kế và thực hành một buổi dạy hoàn chỉnh của chính mình.' },
   { id: 'ca-nhan', name: 'Ứng dụng AI nâng cao hiệu quả cá nhân', q: 'Đã thử AI nhưng vẫn chưa có thêm thời gian cho những điều quan trọng.', for: 'Dành cho chuyên gia và người đi làm',
     what: 'Chuyển từ sử dụng ngẫu hứng sang ứng dụng AI có tư duy và phương pháp để nâng cao năng suất.',
     items: ['Hiểu biết nền tảng về AI', 'Kỹ thuật giao tiếp hiệu quả với AI', 'Xây dựng ứng dụng AI dựa trên bài toán cá nhân hằng ngày', 'Thiết kế thói quen làm việc hiệu quả cùng AI'],
     result: 'Ra về với những use case chạy được trên việc thật của mình.' },
-  { id: 'lanh-dao', name: 'Ứng dụng AI nâng cao hiệu quả lãnh đạo', q: 'Muốn sử dụng AI để dẫn dắt đội ngũ nhưng chưa biết bắt đầu từ đâu.', for: 'Dành cho lãnh đạo và quản lý',
-    what: 'Xu hướng và tư duy lãnh đạo trong thời AI.',
-    items: ['Ứng dụng AI để tối ưu hóa năng suất cá nhân và phát triển đội ngũ', 'Xây dựng ứng dụng AI để quản trị đội ngũ'],
-    result: 'Tự thiết lập được quy trình quản trị đội ngũ có AI hỗ trợ.' },
-  { id: 'ld', name: 'Ứng dụng AI chuyển đổi L&D', q: 'L&D tốn nhiều thời gian phân tích nhu cầu và thiết kế chương trình, chưa theo kịp nhu cầu học tập thay đổi nhanh và thiếu thời gian hỗ trợ chuyển đổi hành vi, nâng cao hiệu suất.', for: 'Dành cho người làm L&D và giảng viên nội bộ',
-    what: 'Xu hướng AI trong đào tạo và phát triển.',
-    items: ['Chuyển dịch vai trò của L&D trong kỷ nguyên AI', 'Nhìn lại cách học của L&D', 'Nhìn lại cách giúp người khác học của L&D', 'Các ứng dụng nâng cao năng suất cho L&D'],
-    result: 'Đội ngũ L&D rút ngắn thời gian thiết kế và phát triển chương trình.' },
-  { id: 'ttt', name: 'Giảng viên chuyên nghiệp', q: 'Đã giảng dạy nhưng chưa tự tin về kỹ năng thiết kế và dẫn dắt đào tạo để truyền đạt hiệu quả, thu hút học viên và tạo ra thay đổi sau khóa học.', for: 'Dành cho chuyên gia, giảng viên nội bộ và người chuyển sang đào tạo chuyên nghiệp',
-    what: 'Giúp người giỏi chuyên môn trở thành người dạy giỏi: thiết kế buổi học lấy người học làm trung tâm và dẫn dắt lớp học có tương tác.',
-    items: ['Chân dung nhà đào tạo chuyên nghiệp', 'Phương pháp tiếp cận trong đào tạo', 'Kỹ năng thiết kế học tập', 'Kỹ năng giảng dạy và huấn luyện chuyên nghiệp', 'Ứng dụng AI để nâng cao hiệu quả thiết kế và giảng dạy'],
-    result: 'Thiết kế và thực hành một buổi dạy hoàn chỉnh của chính mình.' },
+  { id: 'lanh-dao', other: true, name: 'Ứng dụng AI nâng cao hiệu quả lãnh đạo', q: 'Muốn sử dụng AI để dẫn dắt đội ngũ nhưng chưa biết bắt đầu từ đâu.', for: 'Dành cho lãnh đạo và quản lý',
+    what: 'Ứng dụng AI vào công việc hằng ngày của nhà quản lý.',
+    items: ['Dùng AI để tổng hợp thông tin và chuẩn bị quyết định', 'Lập kế hoạch, giao việc và theo dõi tiến độ cùng AI', 'Xây dựng trợ lý AI cho công việc quản lý'],
+    result: 'Tự thiết lập được bộ công cụ AI cho công việc quản lý của mình.' },
 ];
 
+const progCard = (p, label) => `<article class="prog-card rv" id="${p.id}">
+    <div class="side"><span class="ico">${ICONS[p.id]}</span><small>${label}</small><h3>${p.name}</h3>${p.sub ? `<p><strong class="w">${p.sub}</strong></p>` : ''}<p class="q">${p.q}</p><p>${p.for}</p></div>
+    <div class="body"><p class="what">${p.what}</p>
+      <ul class="dash">${p.items.map((x) => `<li>${x}</li>`).join('')}</ul>
+      <p class="result"><small>KẾT QUẢ CHO NGƯỜI HỌC</small>${p.result}</p></div>
+  </article>`;
+
 const ICONS = {
+  'skill': '<svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17.5l9 5 9-5"/></svg>',
   'ca-nhan': '<svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>',
   'lanh-dao': '<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1M15 14.5a4 4 0 0 1 6 3.5v1"/></svg>',
   'ld': '<svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M7 9v5c0 1.7 2.2 3 5 3s5-1.3 5-3V9"/><path d="M21 7v6"/></svg>',
@@ -147,7 +159,7 @@ ${inner}
 }
 
 // Đầu trang chi tiết: tiêu đề hai dòng, ảnh tách nền (cut) hoặc ảnh có khung (framed)
-function pageHero({ eyebrow, l1, l2, sub, intro, buttons = '', img, alt, kind = 'cut', w, h }) {
+function pageHero({ eyebrow, l1, l2, sub, note, intro, buttons = '', img, alt, kind = 'cut', w, h }) {
   const pic = !img ? '' : kind === 'cut'
     ? `<div class="cut"><img src="assets/img/${img}" alt="${alt}" width="${w}" height="${h}"></div>`
     : `<div class="framed"><img src="assets/img/${img}" alt="${alt}" width="${w}" height="${h}"></div>`;
@@ -156,6 +168,7 @@ function pageHero({ eyebrow, l1, l2, sub, intro, buttons = '', img, alt, kind = 
     <span class="eyebrow">${eyebrow}</span>
     <h1 class="big2">${l1} <span>${l2}</span></h1>
     ${sub ? `<p class="sub-title">${sub}</p>` : ''}
+    ${note ? `<p class="hero-note">${note}</p>` : ''}
     <p class="intro">${intro}</p>
     ${buttons ? `<div class="btns">${buttons}</div>` : ''}
   </div>
@@ -240,7 +253,7 @@ const home = {
 <section class="band band-navy on-navy"><div class="col">
   <div class="head-row rv"><h2 class="big2">Khóa <span>học</span></h2><p>Các chương trình đào tạo, mỗi chương trình đi từ hiểu đến làm và kết thúc bằng một sản phẩm dùng được ngay trong công việc.</p></div>
   <div class="prog-grid rv">
-    ${PROGRAMS.map((p) => `<a class="prog-item" href="chuong-trinh.html#${p.id}"><span class="ico">${ICONS[p.id]}</span><div><h3>${p.name}${p.sub ? `<small>${p.sub}</small>` : ''}</h3><p class="q">${p.q}</p><p class="for">${p.for}</p></div></a>`).join('\n    ')}
+    ${PROGRAMS.filter((p) => !p.other).map((p) => `<a class="prog-item" href="chuong-trinh.html#${p.id}"><span class="ico">${ICONS[p.id]}</span><div><h3>${p.name}${p.sub ? `<small>${p.sub}</small>` : ''}</h3><p class="q">${p.q}</p><p class="for">${p.for}</p></div></a>`).join('\n    ')}
   </div>
   <div class="btns rv mt44"><a class="btn btn-o" href="chuong-trinh.html">Xem chi tiết chương trình</a><a class="btn btn-w" href="lien-he.html#ho-so">Nhận thông tin chương trình và hồ sơ năng lực</a></div>
 </div></section>
@@ -253,6 +266,7 @@ const home = {
     </div>
     <div class="txt rv">
       <h2 class="big2">Khai <span>vấn</span></h2>
+      <p class="hero-note">AI giúp tôi có thêm thời gian. Tôi dành thời gian ấy cho con người, qua khai vấn.</p>
       <p class="tbody">Đồng hành cùng anh chị để có được sự thông suốt và hiểu thấu bản thân. Mục tiêu không phải là đưa ra lời khuyên, mà là giúp anh chị tự nhìn rõ điều mình muốn và chuyển hóa thành những kết quả mong đợi trong công việc và cuộc sống.</p>
       <div class="forms">
         <a href="coaching.html"><small>CHO CÁ NHÂN</small><h3>1-1 Coaching</h3><p>Khai vấn dựa trên trí tuệ cảm xúc và theo chuẩn năng lực ICF. Chủ đề thế mạnh: trì hoãn, thói quen, phát triển bản thân và lãnh đạo.</p><span class="go">Tìm hiểu thêm →</span></a>
@@ -389,7 +403,7 @@ ${pageHero({ eyebrow: 'Kỹ sư công nghệ · 11+ năm phát triển con ngư�
 /* ============ CHƯƠNG TRÌNH ============ */
 const programs = {
   title: 'Khóa học · Nguyễn Minh Thắng',
-  desc: 'Các chương trình đào tạo: ứng dụng AI cho cá nhân, nhà lãnh đạo, đội ngũ L&D, và giảng viên chuyên nghiệp.',
+  desc: 'Các khóa học về AI cho người làm L&D: chuyển đổi L&D, xây dựng AI Skill, giảng viên chuyên nghiệp trong kỷ nguyên AI, và ứng dụng AI nâng cao hiệu quả cá nhân.',
   active: 'chuong-trinh',
   body: `
 ${pageHero({ eyebrow: 'Các chương trình đào tạo', l1: 'Khóa', l2: 'học',
@@ -397,16 +411,13 @@ ${pageHero({ eyebrow: 'Các chương trình đào tạo', l1: 'Khóa', l2: 'họ
   buttons: BTN_CONTACT + BTN_PROFILE, img: 'tach-nen-chinh-tay-ao.webp', alt: 'Nguyễn Minh Thắng', w: 570, h: 1300 })}
 
 <section class="band band-cream"><div class="col stack g28">
-  ${PROGRAMS.map((p, i) => `<article class="prog-card rv" id="${p.id}">
-    <div class="side"><span class="ico">${ICONS[p.id]}</span><small>CHƯƠNG TRÌNH 0${i + 1}</small><h3>${p.name}</h3>${p.sub ? `<p><strong class="w">${p.sub}</strong></p>` : ''}<p class="q">${p.q}</p><p>${p.for}</p></div>
-    <div class="body"><p class="what">${p.what}</p>
-      <ul class="dash">${p.items.map((x) => `<li>${x}</li>`).join('')}</ul>
-      <p class="result"><small>KẾT QUẢ CHO NGƯỜI HỌC</small>${p.result}</p></div>
-  </article>`).join('\n  ')}
+  ${PROGRAMS.filter((p) => !p.other).map((p, i) => progCard(p, `KHÓA HỌC CHỦ LỰC 0${i + 1}`)).join('\n  ')}
+  <h2 class="mid2 rv mt44">Chương trình <span>khác</span></h2>
+  ${PROGRAMS.filter((p) => p.other).map((p) => progCard(p, 'CHƯƠNG TRÌNH KHÁC')).join('\n  ')}
 </div></section>
 
 <section class="band band-navy on-navy"><div class="col">
-  <div class="head-row rv"><h2 class="big2">Nhịp <span>học</span></h2><p>Mỗi nội dung trong chương trình đi qua năm bước, và kết thúc bằng kế hoạch thực hành 21–30 ngày sau lớp học.</p></div>
+  <div class="head-row rv"><h2 class="big2">Phương pháp <span>học</span></h2><p>Mỗi chương trình đi qua năm bước, và kết thúc bằng kế hoạch thực hành hoặc xây dựng thói quen 21–30 ngày sau lớp học.</p></div>
   ${stepsHtml([['Hiểu', 'Nắm nguyên lý và khung phương pháp'], ['Quan sát', 'Xem cách làm chuẩn qua ví dụ mẫu'], ['Làm theo', 'Thực hành có hướng dẫn'], ['Tự làm', 'Áp dụng vào việc của mình'], ['Làm cùng nhóm', 'Chia sẻ, phản hồi, nhân rộng']], 5)}
 </div></section>
 `,
@@ -419,6 +430,7 @@ const coaching = {
   active: 'khai-van',
   body: `
 ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', sub: 'Chủ đề thế mạnh: trì hoãn, thói quen, phát triển bản thân và lãnh đạo.',
+  note: 'Thời gian AI giúp tôi tiết kiệm được, tôi dành để làm điều AI không làm thay được: lắng nghe và đồng hành cùng từng người qua khai vấn.',
   intro: 'Đồng hành 1:1 dựa trên nền tảng trí tuệ cảm xúc, theo chuẩn năng lực ICF, để cùng anh chị khám phá suy nghĩ, nhìn lại những trăn trở dưới lăng kính của các nguyên lý hiệu quả, từ đó tìm cơ hội xây dựng những thay đổi duy trì được lâu dài trong công việc và cuộc sống.',
   buttons: BTN_CAL + btnPeer('btn-w'), img: 'coaching-lang-nghe.jpg', alt: 'Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn', kind: 'framed', w: 900, h: 1125 })}
 
@@ -437,7 +449,7 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
   <ul class="bullets rv">
     <li>Có một trăn trở trong công việc hay cuộc sống, muốn được lắng nghe và nhìn lại để có được sự thông suốt</li>
     <li>Đang hoặc sắp trải qua một giai đoạn chuyển đổi quan trọng trong cuộc sống và sự nghiệp</li>
-    <li>Có một trăn trở trong công việc hay cuộc sống muốn được lắng nghe và nhìn lại</li>
+    <li>Chưa thấy an yên, đủ đầy với cuộc sống hiện tại; tìm điều còn thiếu khi thành công nhưng chưa hạnh phúc, hoặc ngược lại</li>
   </ul>
 </div></section>
 
@@ -490,7 +502,7 @@ const al = {
   desc: 'Team Coaching theo phương pháp Action Learning của WIAL: một nhóm cùng giải quyết vấn đề thật, phát triển năng lực và đúc kết học hỏi ngay trong phiên.',
   active: 'khai-van',
   body: `
-${pageHero({ eyebrow: 'Khai vấn · Team Coaching', l1: 'Team', l2: 'Coaching', sub: 'Action Learning · Giải quyết vấn đề thật, phát triển năng lực cùng lúc',
+${pageHero({ eyebrow: 'Khai vấn · Team Coaching', l1: 'Team', l2: 'Coaching', note: 'Thời gian AI giúp tôi tiết kiệm được, tôi dành để đồng hành cùng các nhóm giải quyết vấn đề thật và học hỏi từ chính trải nghiệm đó.', sub: 'Action Learning · Giải quyết vấn đề thật, phát triển năng lực cùng lúc',
   intro: 'Action Learning giúp một nhóm cùng giải quyết một vấn đề thật đang khó của tổ chức. Trong lúc đó, mỗi người rèn luyện năng lực lãnh đạo, kỹ năng đặt câu hỏi và học hỏi lẫn nhau.',
   buttons: BTN_CONTACT, img: 'action-learning-1.jpg', alt: 'Nguyễn Minh Thắng điều phối một nhóm Action Learning', kind: 'framed', w: 1448, h: 1086 })}
 

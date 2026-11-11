@@ -413,3 +413,5 @@ details p{color:var(--body);font-size:16px}
 .help{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 .help p{font-size:16px;color:var(--ink);margin-top:6px}
 @media (max-width:760px){.intro{grid-template-columns:1fr;margin-bottom:40px}.help{grid-template-columns:1fr}}
+.hero-note{border-left:3px solid var(--orange);padding:2px 0 2px 14px;font-style:italic;font-size:16px;line-height:1.6;color:var(--body);max-width:560px}
+.on-navy .hero-note{color:#fff}
