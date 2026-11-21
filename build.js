@@ -181,8 +181,7 @@ function pageHero({ eyebrow, l1, l2, sub, note, intro, buttons = '', img, alt, k
   ${pic}
 </div></section>`;
 }
-const BTN_CAL = `<a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch trải nghiệm khai vấn dành cho Coachee</a>`;
-const btnPeer = (cls) => `<a class="btn ${cls}" href="${C.peerCoaching}" target="_blank" rel="noopener">Đặt lịch Peer coaching dành cho Coach</a>`;
+const BTN_CAL = `<a class="btn btn-o" href="${C.calendly}" target="_blank" rel="noopener">Đặt lịch khai vấn</a>`;
 const BTN_CONTACT = `<a class="btn btn-o" href="lien-he.html">Liên hệ trao đổi</a>`;
 const BTN_PROFILE = `<a class="btn btn-w" href="lien-he.html#ho-so">Nhận hồ sơ năng lực</a>`;
 const stepsHtml = (arr, n) => `<ol class="steps rv n${n}">${arr.map(([t, d], i) => `<li><b>${i + 1}</b><div><strong>${t}</strong><span>${d}</span></div></li>`).join('')}</ol>`;
@@ -439,7 +438,7 @@ const coaching = {
 ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', sub: 'Chủ đề thế mạnh: trì hoãn, thói quen, sự nghiệp và các mối quan hệ.',
   note: 'Trong kỷ nguyên AI, chúng ta cần hiểu về AI và càng cần hiểu hơn về con người.<span class="by">Minh Thắng</span>',
   intro: 'Đồng hành 1:1 dựa trên nền tảng trí tuệ cảm xúc, theo chuẩn năng lực ICF, để cùng anh chị khám phá suy nghĩ, nhìn lại những trăn trở dưới lăng kính của các nguyên lý hiệu quả, từ đó tìm cơ hội xây dựng những thay đổi duy trì được lâu dài trong công việc và cuộc sống.',
-  buttons: BTN_CAL + btnPeer('btn-w'), img: 'coaching-lang-nghe.jpg', alt: 'Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn', kind: 'framed', w: 900, h: 1125 })}
+  buttons: BTN_CAL, img: 'coaching-lang-nghe.jpg', alt: 'Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn', kind: 'framed', w: 900, h: 1125 })}
 
 <section class="band band-white"><div class="col narrow stack">
   <div class="head-row rv mb6"><h2 class="mid2">Khai vấn <span>là gì</span></h2></div>
@@ -497,7 +496,7 @@ ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', s
     <details><summary>Nội dung phiên có được bảo mật không?</summary><p>Có. Tôi giữ bảo mật nội dung mọi phiên khai vấn theo chuẩn đạo đức nghề khai vấn.</p></details>
     <details><summary>Các phiên có chi phí như thế nào?</summary><p>Phiên đầu tiên là phiên trải nghiệm, miễn phí. Với các phiên tiếp theo, tôi sẽ trao đổi trực tiếp với anh chị về mức phí phù hợp sau phiên trải nghiệm.</p></details>
   </div>
-  <div class="btns rv">${BTN_CAL}${btnPeer('btn-n')}</div>
+  <div class="btns rv">${BTN_CAL}</div>
 </div></section>
 <a class="float" href="${C.calendly}" target="_blank" rel="noopener" aria-label="Đặt lịch trải nghiệm khai vấn">${CAL}<span>Đặt lịch khai vấn</span></a>
 `,
