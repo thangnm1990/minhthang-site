@@ -437,7 +437,7 @@ const coaching = {
   active: 'khai-van',
   body: `
 ${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', sub: 'Chủ đề thế mạnh: trì hoãn, thói quen, sự nghiệp và các mối quan hệ.',
-  note: 'Thời gian AI giúp tôi tiết kiệm được, tôi dành để làm điều AI không làm thay được: lắng nghe và đồng hành cùng từng người qua khai vấn.',
+  note: 'Trong kỷ nguyên AI, chúng ta cần hiểu về AI và càng cần hiểu hơn về con người.<span class="by">Minh Thắng</span>',
   intro: 'Đồng hành 1:1 dựa trên nền tảng trí tuệ cảm xúc, theo chuẩn năng lực ICF, để cùng anh chị khám phá suy nghĩ, nhìn lại những trăn trở dưới lăng kính của các nguyên lý hiệu quả, từ đó tìm cơ hội xây dựng những thay đổi duy trì được lâu dài trong công việc và cuộc sống.',
   buttons: BTN_CAL + btnPeer('btn-w'), img: 'coaching-lang-nghe.jpg', alt: 'Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn', kind: 'framed', w: 900, h: 1125 })}
 
