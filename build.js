@@ -276,7 +276,7 @@ ${announceBar()}
       <p class="hero-note">AI giúp tôi có thêm thời gian. Tôi dành thời gian ấy cho con người, qua khai vấn.</p>
       <p class="tbody">Đồng hành cùng anh chị để có được sự thông suốt và hiểu thấu bản thân. Mục tiêu không phải là đưa ra lời khuyên, mà là giúp anh chị tự nhìn rõ điều mình muốn và chuyển hóa thành những kết quả mong đợi trong công việc và cuộc sống.</p>
       <div class="forms">
-        <a href="coaching.html"><small>CHO CÁ NHÂN</small><h3>1-1 Coaching</h3><p>Khai vấn dựa trên trí tuệ cảm xúc và theo chuẩn năng lực ICF. Chủ đề thế mạnh: trì hoãn, thói quen, phát triển bản thân và lãnh đạo.</p><span class="go">Tìm hiểu thêm →</span></a>
+        <a href="coaching.html"><small>CHO CÁ NHÂN</small><h3>1-1 Coaching</h3><p>Khai vấn dựa trên trí tuệ cảm xúc và theo chuẩn năng lực ICF. Chủ đề thế mạnh: trì hoãn, thói quen, sự nghiệp và các mối quan hệ.</p><span class="go">Tìm hiểu thêm →</span></a>
         <a href="action-learning.html"><small>CHO NHÓM VÀ TỔ CHỨC</small><h3>Team Coaching (Action Learning)</h3><p>Theo phương pháp Học hành động (Action Learning) của WIAL. Giải quyết vấn đề thật của cá nhân hoặc tổ chức, phát triển năng lực cùng lúc, với nhóm 4–8 thành viên.</p><span class="go">Tìm hiểu thêm →</span></a>
       </div>
     </div>
@@ -436,7 +436,7 @@ const coaching = {
   desc: 'Khai vấn 1-1 theo trường phái hiệu quả bền vững và thói quen, dựa trên trí tuệ cảm xúc, đào tạo theo chuẩn năng lực ICF.',
   active: 'khai-van',
   body: `
-${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', sub: 'Chủ đề thế mạnh: trì hoãn, thói quen, phát triển bản thân và lãnh đạo.',
+${pageHero({ eyebrow: 'Khai vấn · 1-1 Coaching', l1: '1-1', l2: 'Coaching', sub: 'Chủ đề thế mạnh: trì hoãn, thói quen, sự nghiệp và các mối quan hệ.',
   note: 'Thời gian AI giúp tôi tiết kiệm được, tôi dành để làm điều AI không làm thay được: lắng nghe và đồng hành cùng từng người qua khai vấn.',
   intro: 'Đồng hành 1:1 dựa trên nền tảng trí tuệ cảm xúc, theo chuẩn năng lực ICF, để cùng anh chị khám phá suy nghĩ, nhìn lại những trăn trở dưới lăng kính của các nguyên lý hiệu quả, từ đó tìm cơ hội xây dựng những thay đổi duy trì được lâu dài trong công việc và cuộc sống.',
   buttons: BTN_CAL + btnPeer('btn-w'), img: 'coaching-lang-nghe.jpg', alt: 'Nguyễn Minh Thắng lắng nghe trong một phiên khai vấn', kind: 'framed', w: 900, h: 1125 })}
